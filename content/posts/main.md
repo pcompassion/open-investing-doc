@@ -82,7 +82,7 @@ Problem is that I can not see what I don't see.
 
 ## Study plan {#study-plan}
 
-[Study curriculum]({{< relref "investing" >}})
+[Study curriculum]({{< relref "curriculum" >}})
 
 
 ## algorithm integration principles {#algorithm-integration-principles}
