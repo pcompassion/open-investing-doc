@@ -26,7 +26,7 @@ draft = false
 ## Month 1: Foundation and Fundamentals {#month-1-foundation-and-fundamentals}
 
 
-### <span class="org-todo done DONE">DONE</span> Week 1: Basic Financial Concepts {#week-1-basic-financial-concepts}
+###  Week 1: Basic Financial Concepts {#week-1-basic-financial-concepts}
 
 -   Learning Objective: Introduction to the world of finance.
 -   Resource:
@@ -34,19 +34,19 @@ draft = false
     -   Online Introduction to Finance course (like those on Coursera or Khan Academy)
 
 
-#### <span class="org-todo done DONE">DONE</span> What is the difference between investing and speculating? {#what-is-the-difference-between-investing-and-speculating}
+####  What is the difference between investing and speculating? {#what-is-the-difference-between-investing-and-speculating}
 
 
-#### <span class="org-todo done DONE">DONE</span> Describe the concept of "Mr. Market" from "The Intelligent Investor." {#describe-the-concept-of-mr-dot-market-from-the-intelligent-investor-dot}
+####  Describe the concept of "Mr. Market" from "The Intelligent Investor." {#describe-the-concept-of-mr-dot-market-from-the-intelligent-investor-dot}
 
 
-#### <span class="org-todo done DONE">DONE</span> List and explain the fundamental principles of investing as discussed in the initial chapters. {#list-and-explain-the-fundamental-principles-of-investing-as-discussed-in-the-initial-chapters-dot}
+####  List and explain the fundamental principles of investing as discussed in the initial chapters. {#list-and-explain-the-fundamental-principles-of-investing-as-discussed-in-the-initial-chapters-dot}
 
 
-#### <span class="org-todo done DONE">DONE</span> Take a short online quiz from your finance course to reinforce concepts. {#take-a-short-online-quiz-from-your-finance-course-to-reinforce-concepts-dot}
+####  Take a short online quiz from your finance course to reinforce concepts. {#take-a-short-online-quiz-from-your-finance-course-to-reinforce-concepts-dot}
 
 
-### <span class="org-todo todo NEXT">NEXT</span> Week 2: Introduction to Financial Programming {#week-2-introduction-to-financial-programming}
+###  Week 2: Introduction to Financial Programming {#week-2-introduction-to-financial-programming}
 
 -   Learning Objective: Getting acquainted with Python for financial analytics.
 -   Resource:
@@ -54,13 +54,13 @@ draft = false
     -   Start with basics if not already familiar, then advance to financial data handling.
 
 
-#### <span class="org-todo todo TODO">TODO</span> Write a Python script to download stock price data for a company of your choice using an API like Yahoo Finance or Alpha Vantage. {#write-a-python-script-to-download-stock-price-data-for-a-company-of-your-choice-using-an-api-like-yahoo-finance-or-alpha-vantage-dot}
+####  Write a Python script to download stock price data for a company of your choice using an API like Yahoo Finance or Alpha Vantage. {#write-a-python-script-to-download-stock-price-data-for-a-company-of-your-choice-using-an-api-like-yahoo-finance-or-alpha-vantage-dot}
 
 
-#### <span class="org-todo todo TODO">TODO</span> Calculate the average stock price for the last month and plot the stock price trend. {#calculate-the-average-stock-price-for-the-last-month-and-plot-the-stock-price-trend-dot}
+####  Calculate the average stock price for the last month and plot the stock price trend. {#calculate-the-average-stock-price-for-the-last-month-and-plot-the-stock-price-trend-dot}
 
 
-#### <span class="org-todo todo TODO">TODO</span> What libraries in Python are commonly used for financial data analysis? List and give a brief description. {#what-libraries-in-python-are-commonly-used-for-financial-data-analysis-list-and-give-a-brief-description-dot}
+####  What libraries in Python are commonly used for financial data analysis? List and give a brief description. {#what-libraries-in-python-are-commonly-used-for-financial-data-analysis-list-and-give-a-brief-description-dot}
 
 
 ### Week 3: Basic Calculus Refresher {#week-3-basic-calculus-refresher}
@@ -71,13 +71,13 @@ draft = false
     -   MIT OpenCourseWare Calculus courses or Khan Academy's Calculus section.
 
 
-#### <span class="org-todo todo TODO">TODO</span> Solve a set of differentiation problems focusing on polynomial, exponential, and logarithmic functions. {#solve-a-set-of-differentiation-problems-focusing-on-polynomial-exponential-and-logarithmic-functions-dot}
+####  Solve a set of differentiation problems focusing on polynomial, exponential, and logarithmic functions. {#solve-a-set-of-differentiation-problems-focusing-on-polynomial-exponential-and-logarithmic-functions-dot}
 
 
-#### <span class="org-todo todo TODO">TODO</span> Solve integration problems for the same set of functions. {#solve-integration-problems-for-the-same-set-of-functions-dot}
+####  Solve integration problems for the same set of functions. {#solve-integration-problems-for-the-same-set-of-functions-dot}
 
 
-#### <span class="org-todo todo TODO">TODO</span> Explain, in your own words, the significance of derivatives in understanding rate of change and its potential relevance to finance. {#explain-in-your-own-words-the-significance-of-derivatives-in-understanding-rate-of-change-and-its-potential-relevance-to-finance-dot}
+####  Explain, in your own words, the significance of derivatives in understanding rate of change and its potential relevance to finance. {#explain-in-your-own-words-the-significance-of-derivatives-in-understanding-rate-of-change-and-its-potential-relevance-to-finance-dot}
 
 
 ### Week 4: Financial Markets Overview {#week-4-financial-markets-overview}
@@ -88,16 +88,16 @@ draft = false
     -   Online modules from the Introduction to Finance course focusing on financial instruments and markets.
 
 
-#### <span class="org-todo todo TODO">TODO</span> List and describe different types of financial instruments (e.g., stocks, bonds, mutual funds). {#list-and-describe-different-types-of-financial-instruments--e-dot-g-dot-stocks-bonds-mutual-funds--dot}
+####  List and describe different types of financial instruments (e.g., stocks, bonds, mutual funds). {#list-and-describe-different-types-of-financial-instruments--e-dot-g-dot-stocks-bonds-mutual-funds--dot}
 
 
-#### <span class="org-todo todo TODO">TODO</span> What are the primary and secondary markets? Give examples of exchanges that fall into each category. {#what-are-the-primary-and-secondary-markets-give-examples-of-exchanges-that-fall-into-each-category-dot}
+####  What are the primary and secondary markets? Give examples of exchanges that fall into each category. {#what-are-the-primary-and-secondary-markets-give-examples-of-exchanges-that-fall-into-each-category-dot}
 
 
-#### <span class="org-todo todo TODO">TODO</span> From "The Intelligent Investor," summarize the key takeaways from the chapters you read this week. {#from-the-intelligent-investor-summarize-the-key-takeaways-from-the-chapters-you-read-this-week-dot}
+####  From "The Intelligent Investor," summarize the key takeaways from the chapters you read this week. {#from-the-intelligent-investor-summarize-the-key-takeaways-from-the-chapters-you-read-this-week-dot}
 
 
-#### <span class="org-todo todo TODO">TODO</span> Identify a current event or news article related to the financial markets and write a brief analysis or reflection on its significance. {#identify-a-current-event-or-news-article-related-to-the-financial-markets-and-write-a-brief-analysis-or-reflection-on-its-significance-dot}
+####  Identify a current event or news article related to the financial markets and write a brief analysis or reflection on its significance. {#identify-a-current-event-or-news-article-related-to-the-financial-markets-and-write-a-brief-analysis-or-reflection-on-its-significance-dot}
 
 
 ## Month 2: {#month-2}
