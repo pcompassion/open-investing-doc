@@ -1,5 +1,5 @@
 +++
-title = "Investing"
+title = "Curriculum"
 lastmod = 2023-09-27T21:11:23+09:00
 draft = false
 +++
