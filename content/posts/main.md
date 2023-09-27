@@ -98,4 +98,4 @@ On the other hand, when we decide to implement algorithm, desired properties are
 
 Update decisions as I learn
 
-[decisions]({{< relref "20230922172026-decisions.md" >}})
+[decisions]({{< relref "decision.md" >}})
