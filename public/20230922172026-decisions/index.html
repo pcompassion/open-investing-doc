@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>decisions | My New Hugo Site</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="process select buy candidates human
+for each candidate indicators produce predictions each indicator might produce multiple predictions
+prepare buy / sell (2nd level indicator) combine multiple predictions on each candidate (weight them)
+produce possible buy candidates
+evaluate current holdings
+for each holding
+2nd level indicator evaluate holding
+we have bought this holding with this prediction data is the prediction still valid? can you (indicator) evaluate the current standing?
+decide buy / sell With new candidates for buy, evaluations for current holdings, decide buy / sell">
+    <meta name="generator" content="Hugo 0.119.0">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="decisions" />
+<meta property="og:description" content="process select buy candidates human
+for each candidate indicators produce predictions each indicator might produce multiple predictions
+prepare buy / sell (2nd level indicator) combine multiple predictions on each candidate (weight them)
+produce possible buy candidates
+evaluate current holdings
+for each holding
+2nd level indicator evaluate holding
+we have bought this holding with this prediction data is the prediction still valid? can you (indicator) evaluate the current standing?
+decide buy / sell With new candidates for buy, evaluations for current holdings, decide buy / sell" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.org/20230922172026-decisions/" /><meta property="article:section" content="" />
+
+<meta property="article:modified_time" content="2023-09-27T18:09:32+09:00" />
+<meta itemprop="name" content="decisions">
+<meta itemprop="description" content="process select buy candidates human
+for each candidate indicators produce predictions each indicator might produce multiple predictions
+prepare buy / sell (2nd level indicator) combine multiple predictions on each candidate (weight them)
+produce possible buy candidates
+evaluate current holdings
+for each holding
+2nd level indicator evaluate holding
+we have bought this holding with this prediction data is the prediction still valid? can you (indicator) evaluate the current standing?
+decide buy / sell With new candidates for buy, evaluations for current holdings, decide buy / sell">
+<meta itemprop="dateModified" content="2023-09-27T18:09:32+09:00" />
+<meta itemprop="wordCount" content="910">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="decisions"/>
+<meta name="twitter:description" content="process select buy candidates human
+for each candidate indicators produce predictions each indicator might produce multiple predictions
+prepare buy / sell (2nd level indicator) combine multiple predictions on each candidate (weight them)
+produce possible buy candidates
+evaluate current holdings
+for each holding
+2nd level indicator evaluate holding
+we have bought this holding with this prediction data is the prediction still valid? can you (indicator) evaluate the current standing?
+decide buy / sell With new candidates for buy, evaluations for current holdings, decide buy / sell"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        My New Hugo Site
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <div class="flex-l mt2 mw8 center">
+    <article class="center cf pv5 ph3 ph4-ns mw7">
+      <header>
+        <h1 class="f1">
+          decisions
+        </h1>
+      </header>
+      <div class="nested-copy-line-height lh-copy f4 nested-links mid-gray">
+        <h2 id="process">process</h2>
+<h3 id="select-buy-candidates">select buy candidates</h3>
+<p>human</p>
+<h3 id="for-each-candidate">for each candidate</h3>
+<h4 id="indicators-produce-predictions">indicators produce predictions</h4>
+<p>each indicator might produce multiple predictions</p>
+<h3 id="prepare-buy-sell--2nd-level-indicator">prepare buy / sell (2nd level indicator)</h3>
+<ul>
+<li>
+<p>combine multiple predictions on each candidate (weight them)</p>
+</li>
+<li>
+<p>produce possible buy candidates</p>
+</li>
+<li>
+<p>evaluate current holdings</p>
+<p>for each holding</p>
+<ul>
+<li>
+<p>2nd level indicator evaluate holding</p>
+<p>we have bought this holding with this prediction data
+is the prediction still valid? can you (indicator) evaluate the current standing?</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="decide-buy-sell">decide buy / sell</h3>
+<p>With new candidates for buy, evaluations for current holdings,
+decide buy / sell</p>
+<h2 id="update-process">update process</h2>
+<p>With prediction / evaluation, evaluate indicators / 2nd-level indicators</p>
+<h2 id="indicators">indicators</h2>
+<p>decision unit</p>
+<h3 id="performs-following--api">performs following (api)</h3>
+<h4 id="produce-predictions">produce predictions</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">predict</span>(self, stock_id: str, current_price: Price) <span style="color:#f92672">-&gt;</span> Prediction:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># uses RawData</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span></code></pre></div><h4 id="evaluate-prediction-on-different-time--how-valid-is-the-past-prediction-now">evaluate prediction on different time (how valid is the past prediction now?)</h4>
+<p>if we made prediction on 3month granular, after 1 month, we&rsquo;d be in position to evaluate that prediction
+this is not the same as making another 3month future prediction</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">evaluate</span>(self, stock_id: price: Price, str, buy_data: BuyData, evaluate_at: datetime) <span style="color:#f92672">-&gt;</span> Evaluation:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span></code></pre></div><h4 id="supporting-evaluation--how-much-i--indicator--can-trust-my-previous-prediction-given-data-available-after-making-the-prediction">(supporting evaluation) how much I (indicator) can trust my previous prediction given data available after making the prediction</h4>
+<p>I had <strong>so and so</strong> hypothesis when making predictions, and since they hypothesis turned out to be misplaced, I can re-evaluate my confidence on my previous prediction</p>
+<h4 id="supporting-evaluation--self-check">(supporting evaluation) self check</h4>
+<p>I just made this prediction, but I also know this depends on my assumptions
+In future, if <strong>this and this</strong> happens, I would advice differently.</p>
+<h2 id="2nd-level-indicators">2nd-level indicators</h2>
+<p>aggregate multiple (selective) indicators to produce PredictionLv2 / EvaluationLv2</p>
+<h3 id="lv2-indicator-produce-2nd-level-prediction-evaluation-data">lv2 indicator produce 2nd level Prediction / Evaluation data</h3>
+<h3 id="having-access-to-multiple-indicators-can-yield-better-decision">having access to multiple indicators can yield better decision</h3>
+<ul>
+<li>Whether to let indicator directly talk to another indicator is an implementation chice</li>
+</ul>
+<h2 id="data">data</h2>
+<h3 id="raw-data-for-prediction">raw data for prediction</h3>
+<h4 id="raw-data-falls-into-following-categories">raw data falls into following categories</h4>
+<ul>
+<li>
+<p>Target data</p>
+<p>Target data is what we are trying to get, but unable to get perfectly
+It answers how much an investment is worth and how much we are paying for</p>
+<ul>
+<li>valuation (how much company value)</li>
+<li>price (how much company cost (eg, stock price))</li>
+</ul>
+</li>
+<li>
+<p>Target proxy data</p>
+<p>It is not directly related to the measurement of target data but it is a proxy</p>
+<ul>
+<li>eg, company buying its own stocks can signal a new valuation</li>
+</ul>
+</li>
+<li>
+<p>Environment data</p>
+<p>relavant data which affects interpretation of target data</p>
+<ul>
+<li>inflation</li>
+<li>interest rate</li>
+</ul>
+</li>
+<li>
+<p>Speculation data</p>
+<ul>
+<li>how people perceive market (people speculation)</li>
+<li>how I perceive market (own speculation)</li>
+</ul>
+</li>
+<li>
+<p>Past pattern data</p>
+<p>eg, MA trends analysis</p>
+</li>
+</ul>
+<h4 id="rawdata">Rawdata</h4>
+<ul>
+<li>data type</li>
+<li>data source</li>
+<li>data acquisition date</li>
+</ul>
+<h3 id="prediction">Prediction</h3>
+<ol>
+<li>
+<p>probability of going up / expected-amount (amount is in % unit)</p>
+</li>
+<li>
+<p>when is this prediction about</p>
+<ul>
+<li>prediction-horizon:
+<ul>
+<li>when is this prediction about</li>
+<li>center and range (variance)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>what is the nature of the prediction</p>
+<ul>
+<li>valuation / speculation / environment</li>
+</ul>
+</li>
+<li>
+<p>PredictionReason</p>
+<p>serves two purposes</p>
+<ol>
+<li>clearly represent the prediction logic when reviewing</li>
+<li>clearly indicate what the actual code ran
+<ul>
+<li>holds git commit hash and the function responsible for the prediction</li>
+<li>might be better to place them where future execution run time can find so that we can readily use that code (create override function with commit hash)</li>
+<li>when prediction / evaluation code is updated, it can indicate which previous versions it supercedes</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>FutureEvaluationReason</p>
+<p>similar to PredictionReason but for evaluation purpose</p>
+<ol>
+<li>clearly represent the evaluation logic at the time of prediction</li>
+</ol>
+</li>
+</ol>
+<p>In order to evaluate the prediction later, prediction has to show why (on what basis) we made the prediction by</p>
+<ul>
+<li>I predict Prediction based on RawData at access-time using PredictionReason</li>
+<li>and I think I can evaluate my prediction in future with FutureEvaluationReason</li>
+</ul>
+<h3 id="evaluation">Evaluation</h3>
+<p>similar to Prediction, but holds evaluation data</p>
+<p>We have current holding at price different from prediction.
+We can evaluate current holding</p>
+<ol>
+<li>by asking if we made wrong prediction in the past given we have more data available
+<ul>
+<li>it&rsquo;s as if we are asking, this looks bad but did we really make wrong decision? or do we hold on to it?</li>
+<li>It could be a simple rule to sell holdings</li>
+</ul>
+</li>
+<li>by producing new prediction with new data</li>
+</ol>
+<p>Both 1, 2 can be beneficial</p>
+<p>solely relying on 1 might miss a new opportunity
+solely relying on 2 might result in selling prematuarely</p>
+<p>We also need to perform 1 for updating our PredictionReason / EvaluationReason</p>
+<h3 id="buydata-selldata">BuyData, SellData</h3>
+<p>data stored when buying / selling takes place</p>
+<h4 id="buydata">BuyData</h4>
+<ul>
+<li>purchase record (time, amount)</li>
+<li>BuyDecision
+<ul>
+<li>2nd level indicator&rsquo;s buy decision data
+<ul>
+<li>list of [Prediction, weight]</li>
+<li>2nd level indicator&rsquo;s DecisionReason</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="selldata">SellData</h4>
+<ul>
+<li>selling record</li>
+<li>SellDecision
+<ul>
+<li>list of [Evaluation, weight]</li>
+</ul>
+</li>
+</ul>
+<h2 id="whether-to-buy">whether to buy</h2>
+<h3 id="expectation">expectation</h3>
+<ul>
+<li>probability of going up</li>
+<li>amount to win / lose</li>
+</ul>
+<p>Indicator&rsquo;s Prediction data is combined (by 2nd-level indicator) to create the expectation</p>
+<h2 id="how-much-to-buy">how much to buy</h2>
+<h3 id="kelly">kelly</h3>
+<p>F = P - (1-P) / R</p>
+<p>F: % of investment (against total investment)
+P: probability to win
+R: expected-amount-to-win / expected-amount-to-lose</p>
+<h2 id="how-to-measure-risk">how to measure risk</h2>
+<h3 id="expectation-base--0">expectation - base (0)</h3>
+<p>When expectation is high and above base, it&rsquo;s low risk
+When investing long term, variance doesn&rsquo;t matter much</p>
+<h3 id="variance">variance</h3>
+<p>higher fluctuation (of possible outcome) is higher risk
+initial portfolio theory used variance as risk measurement</p>
+<h3 id="consider">consider</h3>
+<p>high variance is mitigated if long term investment
+when equal expectation, lower variance is lower risk</p>
+<h2 id="how-much-to-diversify">how much to diversify</h2>
+<h3 id="when-not-prepared">when not prepared</h3>
+<p>diversify, start from index fund</p>
+<h3 id="goal-is-to-focus-on-relatively-small--5-or-fewer">goal is to focus on relatively small # (5 or fewer)</h3>
+<h2 id="current-plan--ag1">Current plan (ag1)</h2>
+<p>decide if this is a good time to buy stock (index fund)
+so we have only single candidate</p>
+<ul>
+<li>decide which data to use</li>
+</ul>
+<h2 id="index-fund-indicator"><!-- raw HTML omitted -->TODO<!-- raw HTML omitted --> index fund indicator</h2>
+<h3 id="decide-which-raw-data-to-use"><!-- raw HTML omitted -->TODO<!-- raw HTML omitted --> decide which raw data to use</h3>
+<h3 id="decide-decision-rule"><!-- raw HTML omitted -->TODO<!-- raw HTML omitted --> decide decision rule</h3>
+
+      </div>
+    </article>
+  </div>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://example.org/" >
+    &copy;  My New Hugo Site 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
