@@ -2,3 +2,39 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'Open Investing'
 theme = 'hugo-book'
+
+
+
+
+[menu]
+[[menu.after]]
+  name = "overview"
+  url = "/overview"
+  weight = 1
+[[menu.after]]
+  name = "IA"
+  url = "/ia"
+  weight = 2
+[[menu.after]]
+  name = "math"
+  url = "/math"
+  weight = 3
+[[menu.after]]
+  name = "finance"
+  url = "/finance"
+  weight = 4
+[[menu.after]]
+  name = "economy"
+  url = "/economy"
+  weight = 5
+[[menu.after]]
+  name = "accounting"
+  url = "/accounting"
+  weight = 6
+
+[params]
+
+  # (Optional, default docs) Specify root page to render child pages as menu.
+  # Page is resoled by .GetPage function: https://gohugo.io/functions/getpage/
+  # For backward compatibility you can set '*' to render all sections to menu. Acts same as '/'
+  BookSection = 'docs'
