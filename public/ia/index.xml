@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ias on Open Investing</title>
+    <link>https://example.org/ia/</link>
+    <description>Recent content in Ias on Open Investing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/ia/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RL (chatgpt)</title>
+      <link>https://example.org/ia/rl/</link>
+      <pubDate>Thu, 12 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/ia/rl/</guid>
+      <description>You:
+i wanna know about reinforcement learning
+let&amp;rsquo;s start from bigger picture, but with concrete example.
+ChatGPT:
+Certainly! Reinforcement Learning (RL) is a type of machine learning where an agent learns to make decisions by taking actions in an environment to maximize some notion of cumulative reward.
+Let&amp;rsquo;s illustrate this with a classic example: The FrozenLake Environment.
+Scenario: Imagine a frozen lake that&amp;rsquo;s divided into a grid. The agent starts in the top-left corner and its goal is to reach the bottom-right corner where there&amp;rsquo;s a frisbee.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://example.org/ia/</loc>
+    <lastmod>2023-10-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/</loc>
+    <lastmod>2023-10-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/ia/rl/</loc>
+    <lastmod>2023-10-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/posts/curriculum/</loc>
+    <lastmod>2023-09-27T21:11:23+09:00</lastmod>
+  </url><url>
+    <loc>https://example.org/posts/</loc>
+    <lastmod>2023-09-27T21:11:23+09:00</lastmod>
+  </url><url>
+    <loc>https://example.org/posts/main/</loc>
+    <lastmod>2023-09-27T21:10:34+09:00</lastmod>
+  </url><url>
+    <loc>https://example.org/posts/decision/</loc>
+    <lastmod>2023-09-27T21:08:36+09:00</lastmod>
+  </url><url>
+    <loc>https://example.org/categories/</loc>
+  </url><url>
+    <loc>https://example.org/tags/</loc>
+  </url>
+</urlset>
