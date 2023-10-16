@@ -1,3 +1,11 @@
+---
+title: "Bias variance tradeoff (chatgpt)"
+date: 2023-10-01
+draft: false
+---
+
+(original) https://chat.openai.com/share/fdc20be3-d70b-4c98-8815-308ae676739c
+
 **You:**
 
 in stat, when we estimate y from x, with y = f(x) we assume there's error term such tat y = f(x) + e
