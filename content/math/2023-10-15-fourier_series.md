@@ -2,7 +2,7 @@
 title = "Fourier series"
 author = ["littlehome"]
 date = 2023-10-15
-lastmod = 2023-10-16T16:43:36+09:00
+lastmod = 2023-10-16T16:51:15+09:00
 draft = false
 +++
 
@@ -23,7 +23,15 @@ draft = false
 
 comes up as the application of fourier series
 
-<https://chat.openai.com/share/40a33d10-fe55-4c57-8a08-3063bddf1d56>
+<https://chat.openai.com/share/a66f3b58-13d9-4273-8713-057d72e1e527>
+
+I had a slightly miguided impression on the "periodic nature" of the problem where the object's shape is a ring.
+In the end, the discussion due to the misinterpretation led me to understand what to expect from "Fourier transform" (opposed to fourier series)
+
+
+### Black-Scholes equation {#black-scholes-equation}
+
+<https://chat.openai.com/share/166b2c1c-670b-4ea8-a4ad-60e917d4ec1a>
 
 heat (defusion) equation uses idea of
 
@@ -31,11 +39,6 @@ heat (defusion) equation uses idea of
 -   conservation
 
 Where the discrepance between amount of energy flow-in and flow-out should be equal to the energy stored inside the region.
-
-
-### Black-Scholes equation {#black-scholes-equation}
-
-<https://chat.openai.com/share/166b2c1c-670b-4ea8-a4ad-60e917d4ec1a>
 
 asked if there's financial example of flow / conservation principle applied to finance,
 and GPT answered Black-Scholes
