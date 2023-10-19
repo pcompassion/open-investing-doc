@@ -2,7 +2,7 @@
 title = "Fourier transform"
 author = ["littlehome"]
 date = 2023-10-18
-lastmod = 2023-10-19T15:57:09+09:00
+lastmod = 2023-10-19T16:00:51+09:00
 draft = false
 +++
 
@@ -118,7 +118,7 @@ Suppose we have a function which looks like the following.
 
 The graph is not periodic, and we still want to express it with sum of signals.
 Suppose, the domain of the function is (a, b).
-We are going to pick a large enough T such that \\(\frac{-1}{2}, \frac{1}{2})\\) would cover the domain (a, b).
+We are going to pick a large enough T such that (\\(\frac{-1}{2} T, \frac{1}{2} T)\\) would cover the domain (a, b).
 And we want to make T go to infinity to cover any (non-periodic) function of any domain.
 
 
