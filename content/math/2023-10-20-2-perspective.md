@@ -2,7 +2,7 @@
 title = "What can be debated?"
 author = ["littlehome"]
 date = 2023-10-20
-lastmod = 2023-10-20T16:42:01+09:00
+lastmod = 2023-10-20T16:50:52+09:00
 draft = false
 +++
 
@@ -61,6 +61,11 @@ I don't know the answer.
     -   I don't know if this statement belongs to class of statement. ie does P have property of \\( \tau(P) \in \\{0, 1\\} \\)
 
 Then we are not allowed to have a debate on whether "God exists" if we use the definition.
+
+So one can say, we have to be silent on this matter.
+But don't we get some values out of the discussion on the question?
+Can you assert the question is not debatable? (Do you know for sure if the question can not be answered?)
+I say, the act of defining what is debatable defines what the person thinks what debatable is. It doesn't mean there can be alternative definition.
 
 
 #### it forces us to think of truth value {#it-forces-us-to-think-of-truth-value}
