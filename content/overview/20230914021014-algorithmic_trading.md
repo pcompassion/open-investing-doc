@@ -1,7 +1,7 @@
 +++
 title = "Algorithmic trading"
 author = ["littlehome"]
-lastmod = 2023-10-20T16:05:34+09:00
+date = 2023-10-14
 draft = false
 +++
 

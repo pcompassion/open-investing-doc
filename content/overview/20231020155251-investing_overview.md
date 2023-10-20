@@ -1,7 +1,8 @@
 +++
 title = "strategies criteria"
 author = ["littlehome"]
-lastmod = 2023-10-20T16:03:57+09:00
+date = 2023-10-20
+lastmod = 2023-10-20T16:18:07+09:00
 draft = false
 +++
 
@@ -10,6 +11,7 @@ draft = false
 Emphasize on interpretability for learning purpose
 
 I need to be able to interpret the result in order to learn
+
 [interpretability framework]({{< relref "20230914021014-algorithmic_trading.md#hypothesis" >}})
 
 
