@@ -2,7 +2,7 @@
 title = "What can be debated?"
 author = ["littlehome"]
 date = 2023-10-20
-lastmod = 2023-10-20T16:23:44+09:00
+lastmod = 2023-10-20T16:33:51+09:00
 draft = false
 +++
 
@@ -140,6 +140,15 @@ eg, how one assigns the risk on each possible scenario
 
 where one can access another party's standing on the shared distribution
 eg, based on risk distribution, one might consider a certain risk value to be too risky whereas another might consider it moderate risk.
+
+
+### changing my base assumption is good thing {#changing-my-base-assumption-is-good-thing}
+
+When a person asks a question assuming yes / no, when he gets answer that it can't be answered that way, or has to be framed differently, he's actually getting much more information than he expected.
+
+Where he expected to measure the strength of Yes / No in a domain, he's getting the probability distribution itself needs change.
+
+So when I ask a question what do you think? if someone answers something completely different, it indicates the possiblity of huge information for me.
 
 
 ## Is one perspective better or truther than another? {#is-one-perspective-better-or-truther-than-another}
