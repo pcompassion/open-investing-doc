@@ -2,7 +2,7 @@
 title = "What can be debated?"
 author = ["littlehome"]
 date = 2023-10-20
-lastmod = 2023-10-20T16:36:17+09:00
+lastmod = 2023-10-20T16:42:01+09:00
 draft = false
 +++
 
@@ -65,9 +65,8 @@ Then we are not allowed to have a debate on whether "God exists" if we use the d
 
 #### it forces us to think of truth value {#it-forces-us-to-think-of-truth-value}
 
-Is knowledge-a a common sense?
-
-Yes it can be answered yes or no.
+Suppose a question: Is knowledge-a a common sense?
+It can be answered yes or no.
 
 But one could argue the is rather inheritantly probablistic, even though people surely associates a boolean value (Yes/No) to the answer.
 
@@ -127,10 +126,14 @@ The difference in entropies between the two parties' assessments can be quantifi
 \\[ \Delta H = |H\_A - H\_B| \\]
 This difference, \\( \Delta H \\), signifies the relative difference in uncertainty between the assessments of the two parties regarding statement \\( S \\).
 
-eg, how one might measure riskness of an investment position differently from another
+eg, how one might measure riskness of an investment position differently from another (ie distribution is different)
 
 
 #### Difference in Expectation {#difference-in-expectation}
+
+It is the aggregate measurement of observable in a distribution.
+
+eg, what's one's expectation on return on an investment?
 
 
 #### the entire probability distribution {#the-entire-probability-distribution}
