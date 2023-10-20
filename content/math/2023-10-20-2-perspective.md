@@ -2,7 +2,7 @@
 title = "What can be debated?"
 author = ["littlehome"]
 date = 2023-10-20
-lastmod = 2023-10-20T16:33:51+09:00
+lastmod = 2023-10-20T16:36:17+09:00
 draft = false
 +++
 
@@ -128,6 +128,9 @@ The difference in entropies between the two parties' assessments can be quantifi
 This difference, \\( \Delta H \\), signifies the relative difference in uncertainty between the assessments of the two parties regarding statement \\( S \\).
 
 eg, how one might measure riskness of an investment position differently from another
+
+
+#### Difference in Expectation {#difference-in-expectation}
 
 
 #### the entire probability distribution {#the-entire-probability-distribution}
