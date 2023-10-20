@@ -2,7 +2,7 @@
 title = "What can be debated?"
 author = ["littlehome"]
 date = 2023-10-20
-lastmod = 2023-10-20T16:55:58+09:00
+lastmod = 2023-10-20T17:00:58+09:00
 draft = false
 +++
 
@@ -139,6 +139,10 @@ eg, how one might measure riskness of an investment position differently from an
 It is the aggregate measurement of observable in a distribution.
 
 eg, what's one's expectation on return on an investment?
+
+Often, the yes/no answer can be viewed as a projection from this aggregate assessment.
+
+eg, Do you think president is doing well? yes/no
 
 
 #### the entire probability distribution {#the-entire-probability-distribution}
