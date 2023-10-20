@@ -2,7 +2,7 @@
 title = "What can be debated?"
 author = ["littlehome"]
 date = 2023-10-20
-lastmod = 2023-10-20T16:50:52+09:00
+lastmod = 2023-10-20T16:55:58+09:00
 draft = false
 +++
 
@@ -58,9 +58,9 @@ I don't know the answer.
     -   I don't know if human has capability of answering the question.
     -   I don't know if the notion of God can be defined
     -   I don't know if the word "exist" can be defined
-    -   I don't know if this statement belongs to class of statement. ie does P have property of \\( \tau(P) \in \\{0, 1\\} \\)
+    -   I don't know if this statement is decidable. ie does P have property of \\( \tau(P) \in \\{0, 1\\} \\)
 
-Then we are not allowed to have a debate on whether "God exists" if we use the definition.
+Then we are not allowed to have a debate on whether "God exists" if we use the definition of decidable statement.
 
 So one can say, we have to be silent on this matter.
 But don't we get some values out of the discussion on the question?
