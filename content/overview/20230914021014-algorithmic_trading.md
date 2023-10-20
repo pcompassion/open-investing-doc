@@ -1,6 +1,7 @@
 +++
 title = "Algorithmic trading"
-lastmod = 2023-09-27T21:10:34+09:00
+author = ["littlehome"]
+lastmod = 2023-10-20T16:05:34+09:00
 draft = false
 +++
 
@@ -24,16 +25,35 @@ I'll perform the trading manually and see if I can automate some of my work.
 ## Goal {#goal}
 
 
-### money {#money}
+### personal {#personal}
+
+
+#### money {#money}
 
 beat the stock market by a noticable magine
 
 -   when stock market yields 5% return, I want to achieve 5.5% return (10% relatively)
 
 
-### study {#study}
+#### study {#study}
 
 ai, finance, decision making
+
+
+### broader perspective {#broader-perspective}
+
+
+## openness {#openness}
+
+
+### benefit of openness {#benefit-of-openness}
+
+-   collaboration
+
+
+### open upto {#open-upto}
+
+-   I can make a living comfortably
 
 
 ## Workflow (essential qualities to have) {#workflow--essential-qualities-to-have}
@@ -82,7 +102,13 @@ Problem is that I can not see what I don't see.
 
 ## Study plan {#study-plan}
 
-[Study curriculum]({{< relref "curriculum" >}})
+[Study curriculum]({{< relref "investing" >}})
+This is being updated.
+
+The prerequisite is
+
+-   calculus
+-   stat 101
 
 
 ## algorithm integration principles {#algorithm-integration-principles}
@@ -98,4 +124,4 @@ On the other hand, when we decide to implement algorithm, desired properties are
 
 Update decisions as I learn
 
-[decisions]({{< relref "decision.md" >}})
+[decisions]({{< relref "20230922172026-decisions.md" >}})
