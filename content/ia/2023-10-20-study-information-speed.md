@@ -2,7 +2,7 @@
 title = "project idea for studying Information Speed"
 author = ["littlehome"]
 date = 2023-10-20
-lastmod = 2023-10-20T15:34:58+09:00
+lastmod = 2023-10-20T16:23:39+09:00
 draft = false
 +++
 
