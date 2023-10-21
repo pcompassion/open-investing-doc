@@ -2,7 +2,7 @@
 title = "Black Scholes"
 author = ["littlehome"]
 date = 2023-10-21
-lastmod = 2023-10-22T02:14:51+09:00
+lastmod = 2023-10-22T02:16:23+09:00
 draft = false
 +++
 
@@ -183,13 +183,11 @@ Now since Since E[dB] = 0,
 
 ## Replicating portfolio {#replicating-portfolio}
 
-We want to delta hedge by short selling.
-
 We hold a call option:
 
 \\[ \text{profit} = S(t) - \text{strike\_price (buy price)} \\]
 
-Short selling a stock,
+We want to delta hedge by short selling a stock:
 
 \\[ \text{profit} = \text{sell\_now} - S(t) \\]
 
