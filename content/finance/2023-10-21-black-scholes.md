@@ -2,13 +2,13 @@
 title = "Black Scholes"
 author = ["littlehome"]
 date = 2023-10-21
-lastmod = 2023-10-22T01:57:28+09:00
+lastmod = 2023-10-22T02:14:51+09:00
 draft = false
 +++
 
 ## Random walk {#random-walk}
 
-A scenario where each next step depends solely on the previous step, with all steps having the same length. This is like flipping a coin, where each head means a step forward (+1) and each tail means a step backward (-1). Each step is independent of others and has equal probability.
+A scenario where the position at the next step is determined by the position at the previous step and the independent outcome of the next coin flip. This is like flipping a coin, where each head means a step forward (+1) and each tail means a step backward (-1). Each step is independent of others and has equal probability.
 
 \begin{equation}
   X\_{i} =
@@ -24,7 +24,16 @@ Then,
 
 Let \\( S\_{n} = \sum\_{i}^{n} X\_{i} \\), then \\( Var[S\_{n}] = n \\)
 
+
+### variance {#variance}
+
 We can see that the variance of random walk increases propotionaly with number of steps.
+
+
+### martingale {#martingale}
+
+Simple Random Walk: at step n, your best guess for step n + k is n
+Brownian motion: at time t, expected position in \\( B(t+s) \\) is \\( B(t) \\), ie \\(\mathbb{E}[B(t+s) | B(t)] = B(t)\\)
 
 
 ## Brownian motion {#brownian-motion}
