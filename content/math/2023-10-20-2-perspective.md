@@ -2,7 +2,7 @@
 title = "What can be debated?"
 author = ["littlehome"]
 date = 2023-10-20
-lastmod = 2023-10-20T17:00:58+09:00
+lastmod = 2023-10-21T13:17:29+09:00
 draft = false
 +++
 
@@ -125,15 +125,6 @@ The entropy of a random variable quantifies the uncertainty or unpredictability 
 ### Here object is not to find \\( \tau(P) \\), it is to find the difference {#here-object-is-not-to-find-tau--p--it-is-to-find-the-difference}
 
 
-#### Difference in Entropies {#difference-in-entropies}
-
-The difference in entropies between the two parties' assessments can be quantified as:
-\\[ \Delta H = |H\_A - H\_B| \\]
-This difference, \\( \Delta H \\), signifies the relative difference in uncertainty between the assessments of the two parties regarding statement \\( S \\).
-
-eg, how one might measure riskness of an investment position differently from another (ie distribution is different)
-
-
 #### Difference in Expectation {#difference-in-expectation}
 
 It is the aggregate measurement of observable in a distribution.
@@ -157,7 +148,71 @@ where one can access another party's standing on the shared distribution
 eg, based on risk distribution, one might consider a certain risk value to be too risky whereas another might consider it moderate risk.
 
 
-### changing my base assumption is good thing {#changing-my-base-assumption-is-good-thing}
+#### Difference in Entropies {#difference-in-entropies}
+
+The difference in entropies between the two parties' assessments can be quantified as:
+\\[ \Delta H = |H\_A - H\_B| \\]
+This difference, \\( \Delta H \\), signifies the relative difference in uncertainty between the assessments of the two parties regarding statement \\( S \\).
+
+It can be thought as a normalized aggregated difference on a statement.
+Normalized because we are not looking at the value of observables (it is normalized), and aggregated because we are expressing the difference as a single value.
+
+eg, how one might measure riskness of an investment position differently from another (ie distribution is different)
+
+
+### weakness {#weakness}
+
+Although probablistic statement doesn't preclude a decidable statement (one can use P ={0,1} distribution), it tends to lead to relativism where there's no inherent good quality.
+
+It could also lead to simple goal oriented thinking.
+Because the one thing one can hold onto in this frame is the goal which can't be argued against.
+Remember, in decidable thinking, one could have many truth statements that he has to abide by, but here one can forego everything except the goal statement.
+
+I suspect more competitive environment forces one to take the goal oriented thinking.
+So many goal oriented decision process involves probablistic thinking. (Poker Player, Business owner)
+
+
+## Is one perspective better or truther than another? {#is-one-perspective-better-or-truther-than-another}
+
+How you define 'debate' defines your perspective in some sense.
+
+
+## Different dimension of debate {#different-dimension-of-debate}
+
+Note that decidable statement doesn't preclude a probablistic thinking, ie one can build probablistic statement P and discuss the decidability of the statement.
+Still, it somehow tends to drive a thought process to a more deterministic thinking.
+
+I find the following contrasts are reminiscent of platonic view vs relativism.
+It seems A, B are also reminiscent of classical physics vs quantum (?) physics.
+
+
+### decidable statement vs probablistic statement (A) {#decidable-statement-vs-probablistic-statement--a}
+
+
+### axiom vs hypothesis {#axiom-vs-hypothesis}
+
+Whether one takes the basis of argument as an axiom (a true statement) or as a hypothesis
+
+
+### induction vs hypothetical conditioning (B) {#induction-vs-hypothetical-conditioning--b}
+
+The bridge between statement is considered decidable or it is a conditional statement based on assumptions.
+
+
+### find a true statement vs find difference {#find-a-true-statement-vs-find-difference}
+
+
+### objectives {#objectives}
+
+-   discover truth
+-   persuasion
+-   clarify difference
+-   seek common ground
+-   entertainment
+-   make decision
+
+
+### changing my base assumption is good and hard {#changing-my-base-assumption-is-good-and-hard}
 
 When a person asks a question assuming yes / no, when he gets answer that it can't be answered that way, or has to be framed differently, he's actually getting much more information than he expected.
 
@@ -165,7 +220,4 @@ Where he expected to measure the strength of Yes / No in a domain, he's getting 
 
 So when I ask a question what do you think? if someone answers something completely different, it indicates the possiblity of huge information for me.
 
-
-## Is one perspective better or truther than another? {#is-one-perspective-better-or-truther-than-another}
-
-How you define 'debate' defines your perspective in some sense.
+Dual: as we consider adoptation as good, we also
