@@ -2,7 +2,7 @@
 title = "Black Scholes"
 author = ["littlehome"]
 date = 2023-10-21
-lastmod = 2023-10-22T01:55:20+09:00
+lastmod = 2023-10-22T01:57:28+09:00
 draft = false
 +++
 
@@ -195,26 +195,23 @@ We build a portfolio &Pi; consisting of one European call option and a certain n
 2.  Option Dynamics
 
     We obtained by equating option price change rate to risk-free rate
-
     \\[ dC = \frac{\partial C}{\partial t} dt + \frac{\partial C}{\partial S} dS + \frac{1}{2} \frac{\partial^2 C}{\partial S^2} (dS)^2 \\]
 
-<!--listend-->
-
-1.  Portfolio Dynamics
+3.  Portfolio Dynamics
     Now let's consider the differential change, ie change due to both time and stock price
 
     \\[ d\Pi = dC - \Delta dS \\]
 
     \\[ d\Pi = \left( \frac{\partial C}{\partial t} dt + \frac{\partial C}{\partial S} dS + \frac{1}{2} \frac{\partial^2 C}{\partial S^2} (dS)^2 \right) - \Delta dS \\]
 
-2.  Risk-free Portfolio
+4.  Risk-free Portfolio
 
     We choose &Delta; such that Portfolio is risk-free. We eliminate the random term dS which represents fluctuation due to stock price change.
 
     \\[ \Delta = \frac{\partial C}{\partial S} \\]
     \\[d\Pi = \frac{\partial C}{\partial t} dt + \frac{1}{2} \frac{\partial^2 C}{\partial S^2} (dS)^2 \\]
 
-3.  Portfolio return = Risk-free rate
+5.  Portfolio return = Risk-free rate
 
     \\[ \frac{d\Pi}{\Pi} = r dt \\]
 
@@ -222,9 +219,7 @@ We build a portfolio &Pi; consisting of one European call option and a certain n
 
     \\[ \frac{\frac{\partial C}{\partial t} dt + \frac{1}{2} \frac{\partial^2 C}{\partial S^2} (dS)^2}{C - \Delta S} = r dt \\]
 
-<!--listend-->
-
-1.  simplify
+6.  Simplify
 
     By using (dS)^2 = &sigma;^2 S^2 dt  (We established (&mu; S dt + &sigma; S dB)^2 &asymp; &sigma;^2 S^2 dt)
     \\[ \frac{\frac{\partial C}{\partial t} dt + \frac{1}{2} \frac{\partial^2 C}{\partial S^2} (dS)^2}{C - \Delta S} = r dt \\]
