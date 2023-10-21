@@ -2,7 +2,7 @@
 title = "Black Scholes"
 author = ["littlehome"]
 date = 2023-10-21
-lastmod = 2023-10-22T02:16:23+09:00
+lastmod = 2023-10-22T02:17:55+09:00
 draft = false
 +++
 
@@ -240,6 +240,8 @@ We build a portfolio &Pi; consisting of one European call option and a certain n
 
 Through the process of delta hedging, we construct a portfolio that is insensitive to underlying stock price change.
 Then the return of portfolio should be equal to risk-free rate.
+
+With those assumptions, ie with no arbitrage principle, we arrived at the PDE.
 
 
 ### Same PDE {#same-pde}
