@@ -1,8 +1,8 @@
 +++
 title = "Black Scholes"
-author = ["littlehome"]
+author = ["김유진"]
 date = 2023-10-21
-lastmod = 2023-10-22T02:17:55+09:00
+lastmod = 2023-10-22T16:33:24+09:00
 draft = false
 +++
 
@@ -25,7 +25,7 @@ Then,
 Let \\( S\_{n} = \sum\_{i}^{n} X\_{i} \\), then \\( Var[S\_{n}] = n \\)
 
 
-### variance {#variance}
+### linear growth of variance {#linear-growth-of-variance}
 
 We can see that the variance of random walk increases propotionaly with number of steps.
 
@@ -66,7 +66,7 @@ So W<sub>t</sub> is a random walk over time t, with variance 1 for a unit time, 
 
 ## Geometric Browninan motion {#geometric-browninan-motion}
 
-dS = μS dt + σS dB
+\\[ dS = μS dt + σS dB \\]
 
 We express the change of variable S by two terms
 
@@ -78,11 +78,11 @@ We express the change of variable S by two terms
 
 Start with a discrete compounding model for growth, where:
 
-\\[ s\_{t+dt} = s\_{t} \* e^{u dt} \\]
+\\[ s\_{t+dt} = s\_{t} e^{u dt} \\]
 
 Then take differences to get an increment in s, ds:
 
-\\[ ds = s\_{t+dt} - s\_{t} = s\_{t} \* (e^{μ dt} - 1) \\]
+\\[ ds = s\_{t+dt} - s\_{t} = s\_{t} (e^{μ dt} - 1) \\]
 
 Then divide through by dt to get a finite difference approximation of the derivative ds/dt:
 
@@ -103,7 +103,7 @@ Similarly, this term signifies change in s due to random fluctuation
 σ represents the standard deviation of the percentage change of the stock price (S) over 1 unit time.
 dB is a random variable with N(0, dt), and it gives the random % change which would occur in a dt time interval.
 
-ds = &sigma; s<sub>t</sub> dB captures the random percentage change in the s over the interval dt
+\\(ds = \sigma s\_{t} dB \\) captures the random percentage change in the s over the interval dt
 
 
 ## Ito's lemma {#ito-s-lemma}
@@ -123,13 +123,6 @@ E[dW] &= 0 \\\\
 E[(dW)^2] &= dt
 \end{align\*}
 
-Z<sup>2</sup> follows &chi;<sup>2</sup><sub>1</sub>
-If we consider a new random variable \\( Y = dW^2 \\) , it follows &chi;<sup>2</sup> with mean dt, and variance 2\*dt^2.
-
-Since dW 's mean is dt and variance is negligible, we treat dw^2 = dt
-
-\\[ df = \frac{\partial f}{\partial t} dt + \frac{\partial f}{\partial x} dW + \frac{1}{2} \frac{\partial^2 f}{\partial x^2} dt \\]
-
 If we set W(t) = S(t):
 
 \\[ df(t, S(t)) = \frac{\partial f}{\partial t} dt + \frac{\partial f}{\partial S} dS + \frac{1}{2} \frac{\partial^2 f}{\partial S^2} (dS)^2 \\]
@@ -143,8 +136,7 @@ Now, if we plug our stock price dynamics:
 Focus on the squared term:
 
 \\[ (\mu S dt + \sigma S dB)^2 = \mu^2 S^2 dt^2 + 2 \mu \sigma S^2 dt dB + \sigma^2 S^2 dB^2 \\]
-
-Recall that (dB)^2 = dt
+\\[ E[(dX)^2] = E[\mu^2 dt^2 + 2\mu\sigma dt dB + \sigma^2 dB^2] = E[\sigma^2 dB^2] \text{as dt \to 0} \\]
 
 \\[ (\mu S dt + \sigma S dB)^2 \approx \sigma^2 S^2 dt \\]
 
@@ -155,10 +147,10 @@ We get,
 
 ## Black-Scholes assumption {#black-scholes-assumption}
 
-1.  Stock prices follow a geometric Brownian motion (as described by the equation above).
+1.  Stock prices follow a geometric Brownian motion (as constant rate growth and random fluctuation).
 2.  No arbitrage opportunities.
 3.  The risk-free rate is constant. and every asset return rate is the risk-free rate.
-4.  Volatility is constant.
+4.  Volatility for a unit time is constant.
 5.  There are no taxes or transaction costs.
 6.  The option is European, meaning it can only be exercised at expiration.
 7.  All investors are indifferent to risk. ie, investors don't mind paying the same price for different
@@ -241,8 +233,6 @@ We build a portfolio &Pi; consisting of one European call option and a certain n
 Through the process of delta hedging, we construct a portfolio that is insensitive to underlying stock price change.
 Then the return of portfolio should be equal to risk-free rate.
 
-With those assumptions, ie with no arbitrage principle, we arrived at the PDE.
-
 
 ### Same PDE {#same-pde}
 
@@ -254,6 +244,9 @@ So the PDE satisfies the both dynamics (conditions)
 
 
 ## Equation solving {#equation-solving}
+
+
+### first transformation {#first-transformation}
 
 \\[ V(t,S)=Ke^{-rτ} f(x,τ) \text{ where } τ=T−t \text{ and } x = \ln(\frac{S}{K}) \\]
 
@@ -272,11 +265,40 @@ Shows the option value is propotional to % increase of stock price , when expira
 
 .. skipped ..
 
+
+### second transformation {#second-transformation}
+
+\\[
+y = e^{a x} \\\\
+\theta(\tau, y) = e^{b \tau} f(x, \tau)
+\\]
+
+Here \\( \Theta \\) plays the role of u in heat equation.
+
+\\[ u\_{t} = u\_{xx} \\]
+
+Where, in our case, we have
+\\[ \Tau = T - t, y = e^{ax}, x = \ln \left(\frac{S}{K}\right) \\]
+
+Then we can see, y is linear to S (stock price). So the resulting transformed equation is expressed with scaled version of time and stock price.
+
+u (transformed option price) is related as:
+\\[ u\_{t} = u\_{ss} \\]
+
+Amazing.. so why there's a connection from t to S? ..
+
 Need transformation back and forth..
 
 and arrives at the closed form solution
 
 \\[ C(S, t) = SN(d\_1) - Ke^{-r(T-t)}N(d\_2) \\]
+
+
+### interpretation {#interpretation}
+
+WIP
+
+x = ln \left(\frac{S}{K}\right)
 
 
 ## Plotting the formula {#plotting-the-formula}
@@ -384,7 +406,7 @@ plt.grid(True)
 plt.show()
 ```
 
-{{< figure src="/ox-hugo/2023-10-21-stock_option.png" >}}
+{{< figure src="./.ob-jupyter/6e8a6a3cf0b629387e80d78691408ce03b5ec748.png" >}}
 
 
 ### reading the plot {#reading-the-plot}
@@ -473,6 +495,6 @@ plt.show()
 
 ```
 
-![](/ox-hugo/2023-10-21-controlled.png)
-![](/ox-hugo/2023-10-21-controlled.png)
-![](/ox-hugo/2023-10-21-controlled.png)
+![](./.ob-jupyter/dd61974f727e2281dee7e884cbcf4f14448e7bb6.png)
+![](./.ob-jupyter/41d1cac4861984dc505c6f2051123793839a2e0a.png)
+![](./.ob-jupyter/85d6e6123b1c5e1ceae3a2ae02995acd7f81a6b6.png)
