@@ -2,7 +2,7 @@
 title = "Black Scholes"
 author = ["littlehome"]
 date = 2023-10-21
-lastmod = 2023-10-24T01:00:50+09:00
+lastmod = 2023-10-24T01:04:16+09:00
 draft = false
 +++
 
@@ -246,7 +246,7 @@ So the PDE satisfies the both dynamics (conditions)
 ## Equation solving {#equation-solving}
 
 
-### first transformation {#first-transformation}
+### First transformation {#first-transformation}
 
 \\[ V(t,S)=Ke^{-rτ} f(x,τ) \text{ where } τ = T−t \text{ and } x = \ln(\frac{S}{K}) \\]
 
@@ -266,7 +266,7 @@ Shows the option value is propotional to % increase of stock price , when expira
 .. skipped ..
 
 
-### second transformation {#second-transformation}
+### Second transformation {#second-transformation}
 
 \\[
 y = e^{a x} \\\\
@@ -286,6 +286,9 @@ u (transformed option price) is related as:
 \\[ u\_{t} = u\_{ss} \\]
 
 Amazing.. so why there's a connection from t to S? ..
+I suspect it has to do with our modeling that relates our stock price as random walk, and..
+
+.. skipped ..
 
 We solve the quation and arrives at the closed form solution
 
@@ -413,7 +416,7 @@ is effectively shifting the random variable as if we are looking at X after time
 I expect this makes \\( N(d1) > N(d2) \\), but..
 
 
-### unverified interpretation {#unverified-interpretation}
+### Unverified interpretation {#unverified-interpretation}
 
 The following is not verified but most likely:
 
