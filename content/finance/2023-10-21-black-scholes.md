@@ -1,8 +1,7 @@
 +++
 title = "Black Scholes"
-author = ["김유진"]
 date = 2023-10-21
-lastmod = 2023-10-22T16:33:24+09:00
+lastmod = 2023-10-24T00:43:20+09:00
 draft = false
 +++
 
@@ -70,8 +69,8 @@ So W<sub>t</sub> is a random walk over time t, with variance 1 for a unit time, 
 
 We express the change of variable S by two terms
 
--   μS dt : constant rate growth
--   σS dB : random fluctuation
+-   \\(μS dt\\) : constant rate growth
+-   \\(σS dB\\) : random fluctuation
 
 
 ### Constant rate growth {#constant-rate-growth}
@@ -96,7 +95,7 @@ So you end up with this deterministic differential equation:
 \\[ ds = s\_{t} μ dt \\]
 
 
-### Random fluctuation σS dB {#random-fluctuation-σs-db}
+### Random fluctuation \\(σS dB \\) {#random-fluctuation-σs-db}
 
 Similarly, this term signifies change in s due to random fluctuation
 
@@ -248,7 +247,7 @@ So the PDE satisfies the both dynamics (conditions)
 
 ### first transformation {#first-transformation}
 
-\\[ V(t,S)=Ke^{-rτ} f(x,τ) \text{ where } τ=T−t \text{ and } x = \ln(\frac{S}{K}) \\]
+\\[ V(t,S)=Ke^{-rτ} f(x,τ) \text{ where } τ = T−t \text{ and } x = \ln(\frac{S}{K}) \\]
 
 We suspect that transformation would help us to solve the equation.
 
@@ -278,7 +277,7 @@ Here \\( \Theta \\) plays the role of u in heat equation.
 \\[ u\_{t} = u\_{xx} \\]
 
 Where, in our case, we have
-\\[ \Tau = T - t, y = e^{ax}, x = \ln \left(\frac{S}{K}\right) \\]
+\\[ \tau = T - t, y = e^{ax}, x = \ln \left(\frac{S}{K}\right) \\]
 
 Then we can see, y is linear to S (stock price). So the resulting transformed equation is expressed with scaled version of time and stock price.
 
@@ -287,18 +286,136 @@ u (transformed option price) is related as:
 
 Amazing.. so why there's a connection from t to S? ..
 
-Need transformation back and forth..
-
-and arrives at the closed form solution
+We solve the quation and arrives at the closed form solution
 
 \\[ C(S, t) = SN(d\_1) - Ke^{-r(T-t)}N(d\_2) \\]
 
 
-### interpretation {#interpretation}
+### Interpretation {#interpretation}
 
-WIP
+Let's go back to the Geometric Brownian Motion equation of stock price
 
-x = ln \left(\frac{S}{K}\right)
+\\[ dS\_t = \mu S\_t dt + \sigma S\_t dB\_t \\]
+
+We apply Ito's lemma to find the differential \\( d\ln(S\_t) \\) by setting \\(f(t, W(t)) = \ln(S\_t) \\)
+
+Since it doesn't directly depend on time, \\(\frac{\partial \ln(S\_t)}{\partial t} = 0 \\)
+
+Additionally
+\\( \frac{\partial \ln(S\_t)}{\partial S\_t} = \frac{1}{S\_t}, \frac{\partial^2 \ln(S\_t)}{\partial S\_t^2} = -\frac{1}{S\_t^2}\\)
+
+Plugging this into Ito's lemma:
+
+\\[ df(t, S\_t) = \left( \frac{\partial f}{\partial t} + \mu S\_t \frac{\partial f}{\partial S\_t} + \frac{1}{2} \sigma^2 S\_t^2 \frac{\partial^2 f}{\partial S^2\_t} \right) dt + \sigma S\_t \frac{\partial f}{\partial S\_t} dB\_t \\]
+
+Becomes:
+\\[d\ln(S\_t) = \left( \mu - \frac{1}{2} \sigma^2 \right) dt + \sigma dB\_t \\]
+
+If we integrate both sides
+
+\\[ \ln(S\_t) - \ln(S\_0) = \left( \mu - \frac{1}{2} \sigma^2 \right) t + \sigma B\_t \\]
+
+So \\( S\_{t} \\) is lognormal, because \\( B\_{t} \\) is normal.
+
+And alternatively,
+
+\\[ S\_t = S\_0 e^{\left( \mu - \frac{1}{2}\sigma^2 \right) t + \sigma B\_t} \\]
+
+Now we look at the the option price formula as two terms.
+
+\\[ C(S, t) = SN(d\_1) - Ke^{-r(T-t)}N(d\_2) \\]
+
+\\[ d\_1 = \frac{\ln \left(\frac{S}{K}\right) + \left(r + \frac{\sigma^2}{2}\right) \tau}{\sigma \sqrt{\tau}} \\]
+
+\\[ d\_2 = d\_1 - \sigma \sqrt{\tau} = \frac{\ln \left(\frac{S}{K}\right) + \left(r - \frac{\sigma^2}{2}\right) \tau}{\sigma \sqrt{\tau}} \\]
+
+Here we can remind ourself of the equation:
+
+\\[d\ln(S\_t) = \left( \mu - \frac{1}{2} \sigma^2 \right) dt + \sigma dB\_t \\]
+
+and remind \\( \tau = T - t \\)
+
+So, if we integrate t to T (or in \\(\tau = T-t \\) to 0),
+
+\\[ \int\_t^{T} d\ln(S\_u) = \ln(S\_T) - \ln(S\_t) = \int\_t^{T} \left( \mu - \frac{1}{2} \sigma^2 \right) du + \sigma \int\_t^{T} dB\_u \\]
+
+\\[ \ln(S\_T) - \ln(S\_t) = \left( \mu - \frac{1}{2} \sigma^2 \right) \tau + \sigma B\_\tau \\]
+
+\\[ \frac{\ln\left(\frac{S\_T}{S\_t}\right) - (r - \frac{1}{2} \sigma^2) \tau}{\sigma \sqrt{\tau}} =  \frac{W\_{\tau}}{\sqrt{\tau}} = Z\\]
+
+Let's define a random variable \\( X\\)
+
+\\[X = \ln\left(\frac{S\_T}{S\_t}\right) \\]
+
+As shown before, \\( X = (r - \frac{1}{2} \sigma^2) \tau + \sigma W\_\tau\\)
+
+and \\( Z = \frac{X - (r - \frac{1}{2} \sigma^2) \tau}{\sigma \sqrt{\tau}} \\)
+
+now
+
+\\[ d\_2 = \frac{\ln\left(\frac{S\_t}{K}\right) + (r - \frac{1}{2} \sigma^2) \tau}{\sigma \sqrt{\tau}}\\]
+
+\\[ d\_{2} = - (\frac{\ln\left(\frac{K}{S\_{t}}\right) - (r - \frac{1}{2} \sigma^2) \tau}{\sigma \sqrt{\tau}})\\]
+
+If we think of \\( d\_{2}\\) in terms of X
+
+\\[ X\_{K} = \ln\left(\frac{K}{S\_t}\right)\\]
+
+Then
+
+\\[ d\_{2} = - \frac{X\_K - (r - \frac{1}{2} \sigma^2) \tau}{\sigma \sqrt{\tau}} \\]
+
+By symmetry of the standard normal distribution,
+
+\\[ P(Z \leq d\_2) = P(Z \geq -d\_2)\\]
+
+From there, we get
+
+\\[ P(Z \geq -d\_2) = P(X \leq -X\_K) = P(X \geq X\_K) = P( S\_{T} > S\_{K} )\\]
+
+So 2nd term, \\( Ke^{-r(T-t)}N(d\_2) \\) represents the expected excercising price as present value.
+
+Now, let's handle \\( d\_{1} \\),
+
+\\[ d\_1 = d\_2 + \sigma \sqrt{\tau} \\]
+
+\\[ d\_1 = - \frac{X\_K - (r - \frac{1}{2} \sigma^2) \tau}{\sigma \sqrt{\tau}} + \sigma \sqrt{\tau} \\]
+\\[ d\_1 = - \frac{X\_K - (r + \frac{1}{2} \sigma^2) \tau}{\sigma \sqrt{\tau}} \\]
+
+Now,
+
+\\[ \ln(S\_T) - \ln(S\_t) = \left( \mu - \frac{1}{2} \sigma^2 \right) \tau + \sigma B\_\tau \\]
+
+\\[ \ln(S\_T) - \ln(S\_t) + \sigma^{2} \tau = \left( \mu + \frac{1}{2} \sigma^2 \right) \tau + \sigma B\_\tau \\]
+
+\\[ \frac{\ln\left(\frac{S\_T}{S\_t}\right) - (r - \frac{1}{2} \sigma^2) \tau}{\sigma \sqrt{\tau}} =  \frac{W\_{\tau}}{\sqrt{\tau}} = Z\\]
+
+becomes
+
+\\[ \frac{\ln\left(\frac{S\_T}{S\_t}\right) + \sigma^{2} \tau - (r + \frac{1}{2} \sigma^2) \tau}{\sigma \sqrt{\tau}} =  \frac{W\_{\tau}}{\sqrt{\tau}} = Z\\]
+
+So,
+
+\\[ Y = \ln\left(\frac{S\_T}{S\_t}\right) + \sigma^{2} \tau \\]
+
+So Y is shifted version of X by \\( \sigma^{2} \tau \\)
+
+If i try to guess.. (it is still not so clear)
+
+In Bm, where change in X is linear to variance t.
+Likewise, in GBM, X 's change is linear to variance \\( \sigma^2 t\\),
+
+and
+\\[Y = X + \sigma^2 \tau = \ln(S\_{T}/S\_{t}) + \sigma^2 \tau \\]
+is effectively shifting the random variable as if we are looking at X after time &tau;
+
+I expect this makes \\( N(d1) > N(d2) \\), but..
+
+The following may be true:
+
+\\( N(d\_{2}​) \\) represents the risk-neutral probability that the option will expire in-the-money (without adjusting for the volatility).
+
+\\( N(d\_{1}​)\\) accounts for volatility, which represents the probability of exercise adjusted for expected growth due to the stock's return distribution.
 
 
 ## Plotting the formula {#plotting-the-formula}
@@ -406,7 +523,7 @@ plt.grid(True)
 plt.show()
 ```
 
-{{< figure src="./.ob-jupyter/6e8a6a3cf0b629387e80d78691408ce03b5ec748.png" >}}
+{{< figure src="/ox-hugo/2023-10-21-stock_option.png" >}}
 
 
 ### reading the plot {#reading-the-plot}
@@ -495,6 +612,6 @@ plt.show()
 
 ```
 
-![](./.ob-jupyter/dd61974f727e2281dee7e884cbcf4f14448e7bb6.png)
-![](./.ob-jupyter/41d1cac4861984dc505c6f2051123793839a2e0a.png)
-![](./.ob-jupyter/85d6e6123b1c5e1ceae3a2ae02995acd7f81a6b6.png)
+![](/ox-hugo/2023-10-21-controlled.png)
+![](/ox-hugo/2023-10-21-controlled.png)
+![](/ox-hugo/2023-10-21-controlled.png)
