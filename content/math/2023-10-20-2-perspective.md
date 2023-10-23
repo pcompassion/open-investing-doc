@@ -2,7 +2,7 @@
 title = "What can be debated?"
 author = ["littlehome"]
 date = 2023-10-20
-lastmod = 2023-10-21T13:17:29+09:00
+lastmod = 2023-10-23T14:09:19+09:00
 draft = false
 +++
 
@@ -172,11 +172,6 @@ I suspect more competitive environment forces one to take the goal oriented thin
 So many goal oriented decision process involves probablistic thinking. (Poker Player, Business owner)
 
 
-## Is one perspective better or truther than another? {#is-one-perspective-better-or-truther-than-another}
-
-How you define 'debate' defines your perspective in some sense.
-
-
 ## Different dimension of debate {#different-dimension-of-debate}
 
 Note that decidable statement doesn't preclude a probablistic thinking, ie one can build probablistic statement P and discuss the decidability of the statement.
@@ -220,4 +215,34 @@ Where he expected to measure the strength of Yes / No in a domain, he's getting 
 
 So when I ask a question what do you think? if someone answers something completely different, it indicates the possiblity of huge information for me.
 
-Dual: as we consider adoptation as good, we also
+Yet, I have a tendency to keep my present state. (inertia)  Changing assumption takes an energy and we reluctant to do it unless we seek and envision a better return than cost.
+
+
+## Is one perspective better or truther than another? {#is-one-perspective-better-or-truther-than-another}
+
+How you define 'debate' defines your perspective in some sense.
+
+How do I define 'better' or 'truther'? (It depends on the context)
+
+How about, is one perspective more flexible than another?
+
+The answer to this is not about the inherent nature of the perspectives in mathematical sense, rather it's about the manifested nature of them.
+
+Decidable statements tend to be more fixed (truth).
+But it allows the coexistence of many such fixed statements.
+
+Probabilistic statements tend to be more flexible.
+Yet it tends to fix a goal statement.
+
+So it's hard to say which one is more flexible, I can say one is flexible given the assumption (context).
+This reminds me of phyisical statement on small particles become conditional.
+
+The word we describe something (here flexible, in physics position/speed) is not universal operator. It's a conditional operator.
+
+Which means ...
+
+-   I don't know what I'm talking about
+-   What I say is changable, because the condition we are using might turn out to be too terse.
+-   My thoughts may be a just (linear) approximation on something, but this statement itself might be an approximation or not (where you take it as a truth statement). But I never know.
+-   which leads to another thinking, as position / speed are entangled, our word / thinking may be entangled
+-   and the 'entangled' itself might be 'entangled' or 'xxxed' (which we don't have name because we have no concept as we had not known concept of 'entanglement')
