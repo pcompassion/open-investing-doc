@@ -2,7 +2,7 @@
 title = "Black Scholes"
 author = ["littlehome"]
 date = 2023-10-21
-lastmod = 2023-10-24T00:46:29+09:00
+lastmod = 2023-10-24T01:00:50+09:00
 draft = false
 +++
 
@@ -292,7 +292,7 @@ We solve the quation and arrives at the closed form solution
 \\[ C(S, t) = SN(d\_1) - Ke^{-r(T-t)}N(d\_2) \\]
 
 
-### Interpretation {#interpretation}
+## Interpretation {#interpretation}
 
 Let's go back to the Geometric Brownian Motion equation of stock price
 
@@ -412,11 +412,19 @@ is effectively shifting the random variable as if we are looking at X after time
 
 I expect this makes \\( N(d1) > N(d2) \\), but..
 
-The following may be true:
+
+### unverified interpretation {#unverified-interpretation}
+
+The following is not verified but most likely:
 
 \\( N(d\_{2}​) \\) represents the risk-neutral probability that the option will expire in-the-money (without adjusting for the volatility).
 
 \\( N(d\_{1}​)\\) accounts for volatility, which represents the probability of exercise adjusted for expected growth due to the stock's return distribution.
+
+\\[\Delta = \frac{\partial C}{\partial S} = N(d\_1) + S\_t \frac{\partial N(d\_1)}{\partial S} - Ke^{-r\tau} \frac{\partial N(d\_2)}{\partial S} \\]
+
+After cancelling, we get
+\\[ \Delta = N(d\_{1}) \\]
 
 
 ## Plotting the formula {#plotting-the-formula}
