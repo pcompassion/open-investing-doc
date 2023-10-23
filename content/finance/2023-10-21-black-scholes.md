@@ -1,7 +1,8 @@
 +++
 title = "Black Scholes"
+author = ["littlehome"]
 date = 2023-10-21
-lastmod = 2023-10-24T00:43:20+09:00
+lastmod = 2023-10-24T00:46:29+09:00
 draft = false
 +++
 
@@ -219,7 +220,7 @@ We build a portfolio &Pi; consisting of one European call option and a certain n
 
 6.  Simplify
 
-    By using (dS)^2 = &sigma;^2 S^2 dt  (We established (&mu; S dt + &sigma; S dB)^2 &asymp; &sigma;^2 S^2 dt)
+    By using \\((dS)^2 = \sigma^2 S^2 dt\\)  (We established (\\(\mu S dt + \sigma S dB)^2 \approx \sigma^2 S^2 dt \\))
     \\[ \frac{\frac{\partial C}{\partial t} dt + \frac{1}{2} \frac{\partial^2 C}{\partial S^2} (dS)^2}{C - \Delta S} = r dt \\]
 
     By substituing for &Delta;
