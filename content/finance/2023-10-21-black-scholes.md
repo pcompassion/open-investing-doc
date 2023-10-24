@@ -2,7 +2,7 @@
 title = "Black Scholes"
 author = ["littlehome"]
 date = 2023-10-21
-lastmod = 2023-10-24T01:04:16+09:00
+lastmod = 2023-10-24T12:23:06+09:00
 draft = false
 +++
 
@@ -48,7 +48,7 @@ Since CLT says: \\( \lim\_{n \to \infty} \frac{S\_{n}}{\sqrt{n}} = N(0, 1) \\)
 
 We let:
 \\[ W\_{n}= \frac{S\_{n}}{\sqrt{n}} \\]
-\\[ W = lim<sub>n &rarr; &infin;</sub> W<sub>n</sub> ]
+\\[ W = \lim\_{n \to \infty} W\_{n} \\]
 
 Then \\( W \\) stands for continuous random work with variance 1 for a unit time.
 
@@ -355,9 +355,21 @@ As shown before, \\( X = (r - \frac{1}{2} \sigma^2) \tau + \sigma W\_\tau\\)
 
 and \\( Z = \frac{X - (r - \frac{1}{2} \sigma^2) \tau}{\sigma \sqrt{\tau}} \\)
 
-now
+Alternatively, we could indeed see what the expectation and variance of our X is:
 
-\\[ d\_2 = \frac{\ln\left(\frac{S\_t}{K}\right) + (r - \frac{1}{2} \sigma^2) \tau}{\sigma \sqrt{\tau}}\\]
+\\[ X = \left( \mu - \frac{1}{2} \sigma^2 \right) \tau + \sigma B\_\tau \\]
+
+Because \\( E(B\_{\tau}) = 0\\),
+
+\\[ E[X] = E\left[ \left( \mu - \frac{1}{2} \sigma^2 \right) \tau + \sigma B\_\tau \right] = \left( \mu - \frac{1}{2} \sigma^2 \right) \tau\\]
+
+Because, with fixed \\( \tau \\), \\( ( \mu - \frac{1}{2} \sigma^2 )\\) is a constant term:
+
+\\[ \text{Var}(X) = \text{Var}\left[ \left( \mu - \frac{1}{2} \sigma^2 \right) \tau + \sigma B\_\tau \right] = \sigma^2 \tau \\]
+
+Now we can see \\( d\_{2} \\) is a point evaluated at \\( K \\),
+
+\\[ d\_{2} = \frac{\ln\left(\frac{S\_t}{K}\right) + (r - \frac{1}{2} \sigma^2) \tau}{\sigma \sqrt{\tau}}\\]
 
 \\[ d\_{2} = - (\frac{\ln\left(\frac{K}{S\_{t}}\right) - (r - \frac{1}{2} \sigma^2) \tau}{\sigma \sqrt{\tau}})\\]
 
@@ -371,11 +383,11 @@ Then
 
 By symmetry of the standard normal distribution,
 
-\\[ P(Z \leq d\_2) = P(Z \geq -d\_2)\\]
+\\[ P(Z \leq -d\_2) = P(Z \geq d\_2)\\]
 
 From there, we get
 
-\\[ P(Z \geq -d\_2) = P(X \leq -X\_K) = P(X \geq X\_K) = P( S\_{T} > S\_{K} )\\]
+\\[ P(Z \le -d\_2) = P(X \leq -X\_K) = P(X \geq X\_K) = P( S\_{T} > K )\\]
 
 So 2nd term, \\( Ke^{-r(T-t)}N(d\_2) \\) represents the expected excercising price as present value.
 
@@ -411,14 +423,21 @@ Likewise, in GBM, X 's change is linear to variance \\( \sigma^2 t\\),
 
 and
 \\[Y = X + \sigma^2 \tau = \ln(S\_{T}/S\_{t}) + \sigma^2 \tau \\]
-is effectively shifting the random variable as if we are looking at X after time &tau;
+is effectively shifting the random variable as if we are looking at X after time &tau;.
 
-I expect this makes \\( N(d1) > N(d2) \\), but..
+So we are changing the perspective as if our variable has gained the variability over time, then we look at the probability of our random variable to be greater than a certain value.
+
+Since, gaining variability flattens the distribution, probability of \\( X > x\_{1} \\) gets larger, or you could see \\( d\_1 = d\_2 + \sigma \sqrt{\tau} \\) that \\( d\_1 > d\_2 \\) so cdf with a larger value gets larger.
+
+I expect this makes \\( N(d1) > N(d2) \\).
+
+But I can't see clearly why this shifting makes sense.
+And the fact that we are not discounting makes that the time shift is happening so that our probability can be interpreted as an probability accessed in present time.
 
 
 ### Unverified interpretation {#unverified-interpretation}
 
-The following is not verified but most likely:
+The following is not verified but most likely true:
 
 \\( N(d\_{2}​) \\) represents the risk-neutral probability that the option will expire in-the-money (without adjusting for the volatility).
 
