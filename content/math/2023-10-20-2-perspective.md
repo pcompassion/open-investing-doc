@@ -2,7 +2,7 @@
 title = "What can be debated?"
 author = ["littlehome"]
 date = 2023-10-20
-lastmod = 2023-10-29T16:20:39+09:00
+lastmod = 2023-10-30T01:00:58+09:00
 draft = false
 +++
 
@@ -249,3 +249,4 @@ Which means ...
 -   We can see 'cultural relavatism' but it can also be viewed as absolute relavatism in the sense that you regard each culture has absolute value on its own.
     Likewise, our word is an approximation to what we think we describe, but the word might look different from what we think it looks.
     Pictorially, where one thinks a strip which divides two sides, the actual shape might resemble mobius strip which doesn't.
+-   In physics, conservation of momentum needs a frame of reference. We need to make our stand to talk about something.
