@@ -2,7 +2,7 @@
 title = "What can be debated?"
 author = ["littlehome"]
 date = 2023-10-20
-lastmod = 2023-10-23T14:09:19+09:00
+lastmod = 2023-10-29T16:20:39+09:00
 draft = false
 +++
 
@@ -246,3 +246,6 @@ Which means ...
 -   My thoughts may be a just (linear) approximation on something, but this statement itself might be an approximation or not (where you take it as a truth statement). But I never know.
 -   which leads to another thinking, as position / speed are entangled, our word / thinking may be entangled
 -   and the 'entangled' itself might be 'entangled' or 'xxxed' (which we don't have name because we have no concept as we had not known concept of 'entanglement')
+-   We can see 'cultural relavatism' but it can also be viewed as absolute relavatism in the sense that you regard each culture has absolute value on its own.
+    Likewise, our word is an approximation to what we think we describe, but the word might look different from what we think it looks.
+    Pictorially, where one thinks a strip which divides two sides, the actual shape might resemble mobius strip which doesn't.
