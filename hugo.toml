@@ -35,6 +35,10 @@ theme = 'hugo-book'
   name = "accounting"
   url = "/accounting"
   weight = 7
+[[menu.after]]
+  name = "physics"
+  url = "/physics"
+  weight = 7
 
 [params]
 
