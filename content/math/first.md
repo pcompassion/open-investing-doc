@@ -2,7 +2,7 @@
 title = "Statistics"
 author = ["littlehome"]
 date = 2023-11-06
-lastmod = 2023-11-06T14:09:37+09:00
+lastmod = 2023-11-06T14:12:06+09:00
 draft = false
 +++
 
@@ -201,6 +201,8 @@ plt.show()
 # print(a[1]- a[0])
 ```
 
+{{< figure src="/ox-hugo/2023-11-06-confidence.png" >}}
+
 
 ### interpretation {#interpretation}
 
@@ -309,6 +311,8 @@ table.scale(1, 2)
 plt.show()
 
 ```
+
+{{< figure src="/ox-hugo/2023-11-06-bayes.png" >}}
 
 
 ## Hierarchical bayesian model {#hierarchical-bayesian-model}
@@ -685,6 +689,17 @@ print(prob_greater_than_zero)
 
 
 
+```
+
+```text
+0.9999975264268007
+0.8174373110427677
+/var/folders/bt/01yyln613xx9j6qkxq65tqfr0000gn/T/ipykernel_286/4041749572.py:22: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  polls['spread'] = polls['rawpoll_clinton']/100 - polls['rawpoll_trump']/100
 ```
 
 
