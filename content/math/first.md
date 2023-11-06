@@ -2,7 +2,7 @@
 title = "Statistics"
 author = ["littlehome"]
 date = 2023-11-06
-lastmod = 2023-11-06T13:53:22+09:00
+lastmod = 2023-11-06T14:09:37+09:00
 draft = false
 +++
 
@@ -18,9 +18,9 @@ Mostly basic statistics.
 
 ## gpt chat {#gpt-chat}
 
-overall: <https://chat.openai.com/share/ffce1eb3-c872-48f4-b3fa-22b7bf6d2113>
-on T distribution: <https://chat.openai.com/share/c123934f-8c91-4c11-9b02-a13ec528db03>
-on linearity: <https://chat.openai.com/share/71ab41c6-5c63-43ad-9676-8d4ab108f926>
+-   overall: <https://chat.openai.com/share/ffce1eb3-c872-48f4-b3fa-22b7bf6d2113>
+-   on T distribution: <https://chat.openai.com/share/c123934f-8c91-4c11-9b02-a13ec528db03>
+-   on linearity: <https://chat.openai.com/share/71ab41c6-5c63-43ad-9676-8d4ab108f926>
 
 
 ## polling vs forecasting {#polling-vs-forecasting}
@@ -58,22 +58,6 @@ it is , actually, the best probability estimate we can have with data.
 
 
 ### how variable is your success if you have success rate p? {#how-variable-is-your-success-if-you-have-success-rate-p}
-
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-
-N = 100000
-p = np.linspace(0.35, 0.65, num=100)
-SE = 2 * np.sqrt(p * (1 - p) / N)
-
-plt.plot(p, SE)
-plt.xlabel('p')
-plt.ylabel('SE')
-plt.title('Standard Error over p')
-plt.grid(True)
-plt.show()
-```
 
 
 ### interpretation {#interpretation}
@@ -116,7 +100,7 @@ plt.show()
 
 ### why call it confidence, not probability {#why-call-it-confidence-not-probability}
 
-It is due to the fact that \\( \hat{SE} \\) is not a probability and it is not same as true \\(\\{SE}\\).
+It is due to the fact that \\( \hat{SE} \\) is not a probability and it is not same as true \\( \text{SE} \\).
 
 If we take our sampling as one instance of many such sampling, our clt says, we getting this specific sample is related to real probability of this magnitude, but
 here we are again using our estimate \\( \hat{SE} \\), so the magnitude itself might be off,
@@ -273,10 +257,8 @@ When a test have 99% precision for a rare hidden property, if I succeed on the t
 
 E.g. When a drug test is 99% accurate, and the test shows I have a disease, do I have the disease?
 
-\begin{itemize}
-  \item Probability of you having a disease when the test says so: \\( P(\text{Positive}|\text{Disease}) = 0.99 \\)
-  \item Probability of you not having a disease when the test says so: \\( P(\text{Negative}|\text{No Disease}) = 0.99 \\)
-\end{itemize}
+-   Probability of you having a disease when the test says so: \\( P(\text{Positive}|\text{Disease}) = 0.99 \\)
+-   Probability of you not having a disease when the test says so: \\( P(\text{Negative}|\text{No Disease}) = 0.99 \\)
 
 This problem consistently catches me off-guard.
 The interpretation is, my brain / thinking is so wired to do the conditional probability. I.e. we take a current situation as the whole world and interpret proabability. We are quick to confine our world into this conditioned world.
@@ -354,14 +336,10 @@ To understand what bayesian updating is doing, we'll derive the expression for t
 
 Given:
 
-\\[
-
 \begin{aligned}
 p & \sim N(\mu, \tau^2) \\\\
 Y | p & \sim N(p, \sigma^2)
 \end{aligned}
-
-\\]
 
 we want to compute \\( \mathrm{E}(p | Y = y) \\).
 
@@ -377,48 +355,32 @@ Now, let's derive it.
 
 The density functions for the prior and likelihood are:
 
-\\[
-
 \begin{aligned}
 \text{prior: } & f(p) = \frac{1}{\sqrt{2\pi \tau^2}} \exp\left(-\frac{(p - \mu)^2}{2\tau^2}\right) \\\\
 \text{likelihood: } & f(Y | p) = \frac{1}{\sqrt{2\pi \sigma^2}} \exp\left(-\frac{(Y - p)^2}{2\sigma^2}\right)
 \end{aligned}
 
-\\]
-
 For a given \\( Y = y \\), the posterior density of \\( p \\) is proportional to the product of these:
-
-\\[
 
 \begin{aligned}
 f(p | Y = y) & \propto f(p) \cdot f(Y = y | p) \\\\
 & \propto \exp\left(-\frac{(p - \mu)^2}{2\tau^2}\right) \exp\left(-\frac{(y - p)^2}{2\sigma^2}\right)
 \end{aligned}
 
-\\]
-
 Combining and completing the square in the exponent (we'll drop the constant factors as they will cancel out when we normalize):
-
-\\[
 
 \begin{aligned}
 f(p | Y = y) & \propto \exp\left(-\frac{(p - \mu)^2}{2\tau^2} - \frac{(y - p)^2}{2\sigma^2}\right) \\\\
 & \propto \exp\left(-\frac{\sigma^2(p - \mu)^2 + \tau^2(y - p)^2}{2\sigma^2\tau^2}\right)
 \end{aligned}
 
-\\]
-
 To complete the square, we look for an expression of the form \\( (p - a)^2 \\), where \\( a \\) will be the posterior mean we are looking for.
-
-\\[
 
 \begin{aligned}
 & -\frac{\sigma^2(p^2 - 2p\mu + \mu^2) + \tau^2(y^2 - 2yp + p^2)}{2\sigma^2\tau^2} \\\\
 & = -\frac{(\sigma^2 + \tau^2)p^2 - 2(\sigma^2\mu + \tau^2y)p + \sigma^2\mu^2 + \tau^2y^2}{2\sigma^2\tau^2} \\\\
 & = -\frac{(\sigma^2 + \tau^2)(p^2 - 2p\frac{\sigma^2\mu + \tau^2y}{\sigma^2 + \tau^2} + (\frac{\sigma^2\mu + \tau^2y}{\sigma^2 + \tau^2})^2) - (\frac{\sigma^2\mu + \tau^2y}{\sigma^2 + \tau^2})^2 + \sigma^2\mu^2 + \tau^2y^2}{2\sigma^2\tau^2}
 \end{aligned}
-
-\\]
 
 The term \\( \frac{\sigma^2\mu + \tau^2y}{\sigma^2 + \tau^2} \\) is the posterior mean \\( \mathrm{E}(p | Y = y) \\), and it is weighted by the variances of the prior and the likelihood. Rearranging the terms gives us:
 
@@ -441,7 +403,8 @@ If we define:
 \\[ Precision(X) = \frac{1}{Var(X)} \\]
 
 \\[
-\mathrm{E}(p | Y = y) = \frac{\text{Prior precision}}{\text{prior precision + Likelihood precision}}\mu + \frac{\text{Likelihood precision}}{\text{Prior precision + Likelihood precision}}y
+\mathrm{E}(p | Y = y) \\\\
+= \frac{\text{Prior precision}}{\text{prior precision + Likelihood precision}}\mu + \frac{\text{Likelihood precision}}{\text{Prior precision + Likelihood precision}}y
 \\]
 
 \\[ \text{Posterior Precision} = \text{Prior Precision} + \text{Likelihood Precision} \\]
@@ -451,23 +414,23 @@ If we define:
 
 1.  ****Definition of Variance:**** The population variance \\(\sigma^2\\) is defined as:
 
-\\[ \sigma^2 = E\left[(X - \mu)^2\right] \\]
-   where \\(\mu\\) is the population mean and \\(X\\) is a random variable representing an observation from the population.
+       \\[ \sigma^2 = E\left[(X - \mu)^2\right] \\]
+    where \\(\mu\\) is the population mean and \\(X\\) is a random variable representing an observation from the population.
 
-1.  ****Sample Variance using Population Mean:**** If we knew the population mean \\(\mu\\), we would calculate the variance using:
+2.  ****Sample Variance using Population Mean:**** If we knew the population mean \\(\mu\\), we would calculate the variance using:
 
-\\[ \sigma^2 = \frac{1}{N}\sum\_{i=1}^N (X\_i - \mu)^2 \\]
-   The expected value of this is \\(\sigma^2\\) because we're using the true mean.
+    \\[ \sigma^2 = \frac{1}{N}\sum\_{i=1}^N (X\_i - \mu)^2 \\]
+    The expected value of this is \\(\sigma^2\\) because we're using the true mean.
 
-1.  ****Sample Variance using Sample Mean:**** In reality, we use the sample mean \\(\overline{X}\\) because we don't know \\(\mu\\):
+3.  ****Sample Variance using Sample Mean:**** In reality, we use the sample mean \\(\overline{X}\\) because we don't know \\(\mu\\):
 
-\\[ s^2 = \frac{1}{N-1}\sum\_{i=1}^N (X\_i - \overline{X})^2 \\]
+    \\[ s^2 = \frac{1}{N-1}\sum\_{i=1}^N (X\_i - \overline{X})^2 \\]
 
-1.  ****Bias of an Estimator:**** An estimator is unbiased if its expected value equals the parameter it is estimating. For the sample variance, we want:
+4.  ****Bias of an Estimator:**** An estimator is unbiased if its expected value equals the parameter it is estimating. For the sample variance, we want:
 
-\\[ E(s^2) = \sigma^2 \\]
+    \\[ E(s^2) = \sigma^2 \\]
 
-1.  ****Proof of Unbiasedness:****
+5.  ****Proof of Unbiasedness:****
 
     -   First, we recognize that the sum of squared deviations from the true mean can be expressed as a sum of squared deviations from the sample mean plus the square of the deviations of the sample mean from the true mean, adjusted by the sample size:
 
@@ -725,7 +688,7 @@ print(prob_greater_than_zero)
 ```
 
 
-## conjugate prior {#conjugate-prior}
+## Conjugate prior {#conjugate-prior}
 
 A conjugate prior is a choice of prior distribution that, when combined with the likelihood function, results in a posterior distribution that is in the same family as the prior probability distribution.
 
@@ -778,41 +741,41 @@ Because the sample size is small and we are using the SE as an estimate for \\( 
 
 1.  ****Sample Mean (\\( \bar{X} \\)) Distribution****:
 
-The sample mean of a random sample drawn from a normal distribution with mean \\( \mu \\) and variance \\( \sigma^2 \\) is also normally distributed with mean \\( \mu \\) and variance \\( \sigma^2/n \\):
+    The sample mean of a random sample drawn from a normal distribution with mean \\( \mu \\) and variance \\( \sigma^2 \\) is also normally distributed with mean \\( \mu \\) and variance \\( \sigma^2/n \\):
 
-\\[ \bar{X} \sim N\left(\mu, \frac{\sigma^2}{n}\right) \\]
+    \\[ \bar{X} \sim N\left(\mu, \frac{\sigma^2}{n}\right) \\]
 
-1.  ****Sample Variance (\\( s^2 \\)) Distribution****:
+2.  ****Sample Variance (\\( s^2 \\)) Distribution****:
 
-The sample variance \\( s^2 \\) is related to the chi-squared distribution. If \\( X\_i \\) are independent normal random variables, then \\( (n-1)s^2/\sigma^2 \\) (where \\( s^2 \\) is the sample variance) follows a chi-squared distribution with \\( n-1 \\) degrees of freedom:
+    The sample variance \\( s^2 \\) is related to the chi-squared distribution. If \\( X\_i \\) are independent normal random variables, then \\( (n-1)s^2/\sigma^2 \\) (where \\( s^2 \\) is the sample variance) follows a chi-squared distribution with \\( n-1 \\) degrees of freedom:
 
-\\[ \frac{(n-1)s^2}{\sigma^2} \sim \chi^2\_{n-1} \\]
+    \\[ \frac{(n-1)s^2}{\sigma^2} \sim \chi^2\_{n-1} \\]
 
-1.  ****Combining the Two****:
+3.  ****Combining the Two****:
 
-To form the t-statistic, you're essentially normalizing the sample mean by the estimated standard error of the mean, which is the sample standard deviation divided by the square root of the sample size (\\( s/\sqrt{n} \\)):
+    To form the t-statistic, you're essentially normalizing the sample mean by the estimated standard error of the mean, which is the sample standard deviation divided by the square root of the sample size (\\( s/\sqrt{n} \\)):
 
-\\[ T = \frac{\bar{X} - \mu}{s/\sqrt{n}} \\]
+    \\[ T = \frac{\bar{X} - \mu}{s/\sqrt{n}} \\]
 
-This can be rewritten as:
+    This can be rewritten as:
 
-\\[ T = \frac{\bar{X} - \mu}{\sigma/\sqrt{n}} \cdot \frac{\sigma}{s} \\]
+    \\[ T = \frac{\bar{X} - \mu}{\sigma/\sqrt{n}} \cdot \frac{\sigma}{s} \\]
 
-Here, the first fraction \\( (\bar{X} - \mu)/(\sigma/\sqrt{n}) \\) would follow a standard normal distribution (Z-distribution) if \\( \sigma \\) was known. Since \\( \sigma \\) is unknown and we use \\( s \\) instead, we need to account for the additional variability introduced by estimating \\( \sigma \\) with \\( s \\). This is done by multiplying by \\( \sigma/s \\), which introduces the second distribution, the square root of a chi-squared distribution (because \\( s^2 \\) is involved), into the mix.
+    Here, the first fraction \\( (\bar{X} - \mu)/(\sigma/\sqrt{n}) \\) would follow a standard normal distribution (Z-distribution) if \\( \sigma \\) was known. Since \\( \sigma \\) is unknown and we use \\( s \\) instead, we need to account for the additional variability introduced by estimating \\( \sigma \\) with \\( s \\). This is done by multiplying by \\( \sigma/s \\), which introduces the second distribution, the square root of a chi-squared distribution (because \\( s^2 \\) is involved), into the mix.
 
-1.  ****t-Distribution Derivation****:
+4.  ****t-Distribution Derivation****:
 
-The t-distribution arises when you divide a standard normal variable \\( Z \\) by the square root of a chi-squared variable \\( X^2 \\) divided by its degrees of freedom, which is independent of \\( Z \\):
+    The t-distribution arises when you divide a standard normal variable \\( Z \\) by the square root of a chi-squared variable \\( X^2 \\) divided by its degrees of freedom, which is independent of \\( Z \\):
 
-\\[ T = \frac{Z}{\sqrt{X^2/(n-1)}} \\]
+    \\[ T = \frac{Z}{\sqrt{X^2/(n-1)}} \\]
 
-Here, \\( Z \\) has a standard normal distribution, and \\( X^2 \\) has a chi-squared distribution with \\( n-1 \\) degrees of freedom. The resulting distribution of \\( T \\) is the t-distribution with \\( n-1 \\) degrees of freedom.
+    Here, \\( Z \\) has a standard normal distribution, and \\( X^2 \\) has a chi-squared distribution with \\( n-1 \\) degrees of freedom. The resulting distribution of \\( T \\) is the t-distribution with \\( n-1 \\) degrees of freedom.
 
-1.  ****Non-Normality of the t-Distribution****:
+5.  ****Non-Normality of the t-Distribution****:
 
-The t-distribution is not normal because the denominator introduces variability from the chi-squared distribution. This means that for small samples, the distribution of the t-statistic has fatter tails than the normal distribution, reflecting the additional uncertainty from estimating \\( \sigma \\) with \\( s \\). As the sample size gets larger, the chi-squared distribution in the denominator becomes more concentrated around its mean (which is its degrees of freedom), and thus the t-distribution approaches a normal distribution due to the law of large numbers.
+    The t-distribution is not normal because the denominator introduces variability from the chi-squared distribution. This means that for small samples, the distribution of the t-statistic has fatter tails than the normal distribution, reflecting the additional uncertainty from estimating \\( \sigma \\) with \\( s \\). As the sample size gets larger, the chi-squared distribution in the denominator becomes more concentrated around its mean (which is its degrees of freedom), and thus the t-distribution approaches a normal distribution due to the law of large numbers.
 
-The critical takeaway is that the t-distribution accounts for the additional uncertainty that comes with estimating the population variance from a sample, especially when that sample is small. This is why it has heavier tails compared to the normal distribution, indicating a higher probability of observing values far from the mean.
+    The critical takeaway is that the t-distribution accounts for the additional uncertainty that comes with estimating the population variance from a sample, especially when that sample is small. This is why it has heavier tails compared to the normal distribution, indicating a higher probability of observing values far from the mean.
 
 
 ### Interpretation {#interpretation}
