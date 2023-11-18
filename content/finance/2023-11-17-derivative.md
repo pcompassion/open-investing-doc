@@ -1,8 +1,8 @@
 +++
 title = "Derivative Game"
-author = ["littlehome"]
+author = ["김유진"]
 date = 2023-11-17
-lastmod = 2023-11-18T10:32:56+09:00
+lastmod = 2023-11-18T21:00:19+09:00
 draft = false
 +++
 
@@ -187,10 +187,10 @@ P2 are assuming the expectation can be considered as the price in the future.
 
 -  Assumptions of P2
 
-    -   ..
+    -   The world is not that efficient
 
 
-### What's my thought {#what-s-my-thought}
+### So what {#so-what}
 
 It makes sense to reason as P1 does, as the theoretical base.
 However, there are so many strong assumptions to use the model.
@@ -204,4 +204,7 @@ Of course, if there's a big gap between return on savings account and return on 
     Where one reason from the assumption (or principle) that no arbitrage gain is possible.
     -   It is clear we can not apply the same model to an asset where enter/exit is not so easy.
     -   Buying a ticket and short selling a ticket doesn't cost one much effort. So it is a better candidate to apply the P1 model.
+-   I can't buy that the price is already reflecting all the future information.
 -   There's no doubt it's a sane model. And I don't know if there can be nicer model yet reflects the reality as well as the P1. Just not sure how close it is.
+
+When we invest on something, we have a different expectation (not just the \\(E\\) but also various qualities). I think that might indicate how far the real world is from the model.
