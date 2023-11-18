@@ -2,7 +2,7 @@
 title = "Derivative Game"
 author = ["littlehome"]
 date = 2023-11-17
-lastmod = 2023-11-17T19:05:45+09:00
+lastmod = 2023-11-18T10:32:56+09:00
 draft = false
 +++
 
@@ -154,4 +154,54 @@ Now then, it is awkward if we consider, selling the two tickets now, they yield 
 So the alternative interpretation is not explaining away the different quality in the future, because at present time they are truely equal.
 
 So, am I buying that argument that there's a fair price because of the non arbitrage principle?
-Not sure
+
+****QUESTION**** what is the alternative perspective's assumption?
+
+Let us denote the perspective of no arbitrage as P1, and the other questioning perspective as P2.
+
+When P2 have the same 'expectation' \\( F\_T \\) and different variance
+
+P2 are assuming the expectation can be considered as the price in the future.
+
+-   P2: There are products with the same expectation price, but with different variances, we value them differently, yet P1 is saying they should be same.
+-   P1: I didn't make that claim. I only talk about current price, and a (fixed) future price. (with no expectation attached)
+
+
+#### Assumptions on both sides {#assumptions-on-both-sides}
+
+<!--list-separator-->
+
+-  Assumptions of P1 (narative of P2)
+
+    -   You (P1) are saying that different ticket with the same \\( S\_0 \\) and \\( S\_T \\) has the same value whatever path it took from \\( S\_0 \\) to \\( S\_T \\)
+
+    -   You (P1) are saying, when you have the same initial price and ending price, there's no difference (which can be measured by price) between the two tickets.
+
+    -   You are saying, when we have the same price in the present, the price itself and the price alone is indicative of the future value of the product.
+
+        E.g investing in real estate vs investing in stock with the same amount of money should yield the same return. (Despite we sense they have inherently different qualities)
+
+        P1: I'm saying 'savings account' and this 'ticket game' is so easy to move-in and out, its not same as real estate vs stock market.
+
+<!--list-separator-->
+
+-  Assumptions of P2
+
+    -   ..
+
+
+### What's my thought {#what-s-my-thought}
+
+It makes sense to reason as P1 does, as the theoretical base.
+However, there are so many strong assumptions to use the model.
+
+Not sure how close the model is to the real world.
+
+Of course, if there's a big gap between return on savings account and return on the game market, there will be people who try to profit from the difference and they will close the gaps down.
+
+-   P1's model is (simplification) a perspective to look at only two specific time and price.
+-   It's the choice that one choose to reason with that perspective.
+    Where one reason from the assumption (or principle) that no arbitrage gain is possible.
+    -   It is clear we can not apply the same model to an asset where enter/exit is not so easy.
+    -   Buying a ticket and short selling a ticket doesn't cost one much effort. So it is a better candidate to apply the P1 model.
+-   There's no doubt it's a sane model. And I don't know if there can be nicer model yet reflects the reality as well as the P1. Just not sure how close it is.
