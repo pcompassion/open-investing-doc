@@ -2,7 +2,7 @@
 title = "Derivative Game"
 author = ["김유진"]
 date = 2023-11-17
-lastmod = 2023-11-18T21:00:19+09:00
+lastmod = 2023-11-18T21:07:13+09:00
 draft = false
 +++
 
@@ -77,21 +77,19 @@ In previous game, if you predict wrong, you lost money.
 Now, in this new game, you pay insurance fee, but if you predict wrong, you just lose the insurance fee.
 When your prediction is right, you end up paying the insurance fee but it is small compared to the risk that your prediction might be wrong.
 
+So do you host collect the insurance fee? No
+
 
 ### The insurance fee goes to the other player not to the host {#the-insurance-fee-goes-to-the-other-player-not-to-the-host}
 
 When you buy or sell, you have to find a player who would want sell or buy (if you buy, he has to sell)
 
-The insurance fee goes from buyer to seller.
+The insurance fee goes from buyer to seller? No.
 
 
-### We need insurance for both predictions {#we-need-insurance-for-both-predictions}
+### Buyer or seller can play the role of insuerer or insured {#buyer-or-seller-can-play-the-role-of-insuerer-or-insured}
 
 Remember, buy and sell are the prediction you make in the present.
-
-The game offers the insurance for the both prediction whether you predict the price rise or fall.
-
-So one player has to play the insurance company role, and another player has to pay the insurance fee.
 
 -   insurance company collects the insurance fee, but he can lose big
 -   an insured can win big, but loses small
