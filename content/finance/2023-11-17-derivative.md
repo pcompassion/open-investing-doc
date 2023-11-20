@@ -1,8 +1,8 @@
 +++
 title = "Derivative Game"
-author = ["김유진"]
+author = ["Eugene Kim"]
 date = 2023-11-17
-lastmod = 2023-11-18T21:07:13+09:00
+lastmod = 2023-11-20T12:43:21+09:00
 draft = false
 +++
 
@@ -78,6 +78,19 @@ Now, in this new game, you pay insurance fee, but if you predict wrong, you just
 When your prediction is right, you end up paying the insurance fee but it is small compared to the risk that your prediction might be wrong.
 
 So do you host collect the insurance fee? No
+
+Host:
+
+You have to find another player who is willing to take the premium.
+Or you could be the person who takes the premium from the other player.
+
+You:
+
+Oh, so if i think the price will rise, I can bet on by
+
+-   (make promise to) buy the ticket at present price, with small risk (insurance fee)
+-   find a person who predicts opposite and want to (make promise to) sell the ticket at present price.
+    `QUESTION` Here, I expect small insurance fee, but high risk, why would I do that?
 
 
 ### The insurance fee goes to the other player not to the host {#the-insurance-fee-goes-to-the-other-player-not-to-the-host}
