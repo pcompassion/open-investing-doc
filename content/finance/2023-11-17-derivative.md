@@ -1,8 +1,8 @@
 +++
 title = "Derivative Game"
-author = ["Eugene Kim"]
+author = ["littlehome"]
 date = 2023-11-17
-lastmod = 2023-11-20T12:43:21+09:00
+lastmod = 2023-11-21T11:32:27+09:00
 draft = false
 +++
 
@@ -58,7 +58,8 @@ Now you have agreement to buy the ticket and also to sell the ticket in the futu
 If your selling price is higher than your buying price, you gain, otherwise you lose.
 And your outcome is actually already known, and you don't have to wait for the game to finish.
 
-****QUESTION****
+
+#### <span class="org-todo done QUESTION">QUESTION</span>  {#d41d8c}
 
 The price difference is in the future, how the host give you the money or take the money in the present time?
 
@@ -90,7 +91,32 @@ Oh, so if i think the price will rise, I can bet on by
 
 -   (make promise to) buy the ticket at present price, with small risk (insurance fee)
 -   find a person who predicts opposite and want to (make promise to) sell the ticket at present price.
-    `QUESTION` Here, I expect small insurance fee, but high risk, why would I do that?
+
+
+#### <span class="org-todo done QUESTION">QUESTION</span> Here, I expect small insurance fee, but high risk, why would I do that? {#here-i-expect-small-insurance-fee-but-high-risk-why-would-i-do-that}
+
+Maybe it's because of supply-demand, most people would wanna play the safe side, so demand is higher and supply is lower thus diriving the (insurance) price up, and the insurerer would have sufficient return (price) in the end.
+
+Actually, the insurance fee can be calculated theoretically by a formular. And this formular doesn't use the supply-demand concept at all. (look at part 3 of Black scholes <https://chat.openai.com/share/c759ecbe-3cad-42aa-b76e-c222009ceb10>)
+
+
+#### <span class="org-todo done QUESTION">QUESTION</span> How does BS interpret supply-demand? {#how-does-bs-interpret-supply-demand}
+
+ok.. so Black Scholes uses mathematical model where it only considers random fluctuation and perfect market (no arbitrage), what about supply-demand?
+
+Economist theory uses supply-demand as a primary tool for modeling price. Darn, how could it be possible one model completely ignores another.
+
+It wouldn't make sense if bringing in supply-demand into the BS framework would cause contradiction.
+
+There must be at least an interpretation from BS side: probably, since BS model seems to be assuming perfect market (in some sense), in their model, the supply-demand concept doesn't apply, the price only moves through theoretical path, where we don't need to consider arbitrary supply-demand at all.
+
+
+#### <span class="org-todo done QUESTION">QUESTION</span> Is there a way to use supply-demand to model the insurance fee? {#is-there-a-way-to-use-supply-demand-to-model-the-insurance-fee}
+
+At the least, we could guess the price (where the most players play) in the first game and second game is different, and supply-demand would say the price in the second game would be higher.
+(Am I applying supply-demand correctly here?)
+
+And this reasoning has nothing to do with BS.
 
 
 ### The insurance fee goes to the other player not to the host {#the-insurance-fee-goes-to-the-other-player-not-to-the-host}
@@ -138,20 +164,24 @@ Suppose they have the same current market price \\( S\_0 \\) and same game endin
 
 Suppose they have different market price for the prediction game. \\( F\_A0 < F\_B0 \\)
 
-****QUESTION**** If one buys \\( S\_0 \\) and sells \\( F\_B0 \\), he's better off than someone who sells \\( F\_A0 \\)
+
+#### <span class="org-todo done QUESTION">QUESTION</span> If one buys \\( S\_0 \\) and sells \\( F\_B0 \\), he's better off than someone who sells \\( F\_A0 \\) {#if-one-buys-s-0-and-sells-f-b0-he-s-better-off-than-someone-who-sells-f-a0}
 
 This can't happen. What do you mean can't happen?
 The interpretation is that the gain of \\( F\_0 - S\_0 \\) should be equal to the other financial activity which has no randomness such as savings account.
 
-****QUESTION**** What is the assumption of the interpretation?
+<!--list-separator-->
 
-It assumes that if the assumption is not met, one can instead play the strategy instead of using the savings account without incurring any more risk.
+- <span class="org-todo done QUESTION">QUESTION</span>  What is the assumption of the interpretation?
 
-Ok, theoretically makes sense. but can we really apply that model to the real world?
-I.e would anyone bet on the interpretation and really use the game strategy over savings account?
-Doubtful, but the price \\( F\_0 \\) should not be far from the theoretical model can be understood.
+    It assumes that if the assumption is not met, one can instead play the strategy instead of using the savings account without incurring any more risk.
 
-****QUESTION**** what if we buy that assumption, then what's the interpretation?
+    Ok, theoretically makes sense. but can we really apply that model to the real world?
+    I.e would anyone bet on the interpretation and really use the game strategy over savings account?
+    Doubtful, but the price \\( F\_0 \\) should not be far from the theoretical model can be understood.
+
+
+#### <span class="org-todo done QUESTION">QUESTION</span> what if we buy that assumption, then what's the interpretation? {#what-if-we-buy-that-assumption-then-what-s-the-interpretation}
 
 Suppose you have two tickets which you expect their future price will be the same, but their variance is different.
 
@@ -166,7 +196,8 @@ So the alternative interpretation is not explaining away the different quality i
 
 So, am I buying that argument that there's a fair price because of the non arbitrage principle?
 
-****QUESTION**** what is the alternative perspective's assumption?
+
+#### <span class="org-todo done QUESTION">QUESTION</span> what is the alternative perspective's assumption? {#what-is-the-alternative-perspective-s-assumption}
 
 Let us denote the perspective of no arbitrage as P1, and the other questioning perspective as P2.
 

@@ -3,15 +3,16 @@ languageCode = 'en-us'
 title = 'Open Investing'
 theme = 'hugo-book'
 
-
-
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [menu]
 [[menu.after]]
-  name = "all-posts"
+  name = "all_posts"
   url = "/all_posts"
   weight = 1
-
 [[menu.after]]
   name = "posts"
   url = "/posts"
