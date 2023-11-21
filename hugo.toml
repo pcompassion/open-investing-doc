@@ -8,6 +8,11 @@ theme = 'hugo-book'
 
 [menu]
 [[menu.after]]
+  name = "all-posts"
+  url = "/all_posts"
+  weight = 1
+
+[[menu.after]]
   name = "posts"
   url = "/posts"
   weight = 1
