@@ -2,7 +2,7 @@
 title = "Derivative Game"
 author = ["littlehome"]
 date = 2023-11-17
-lastmod = 2023-11-21T11:32:27+09:00
+lastmod = 2023-11-21T11:54:09+09:00
 draft = false
 +++
 
@@ -142,6 +142,8 @@ Remember, buy and sell are the prediction you make in the present.
 -   insurer (insurance company) who predicts price fall
 -   insured who predicts price rise
 
+k
+
 
 ## Fair price {#fair-price}
 
@@ -162,10 +164,10 @@ Importantly, there's no randomness left in the equation. We have only constants.
 Suppose there are two tickets \\( S\_A \\) and \\( S\_B \\)
 Suppose they have the same current market price \\( S\_0 \\) and same game ending date \\( T \\),
 
-Suppose they have different market price for the prediction game. \\( F\_A0 < F\_B0 \\)
+Suppose they have different market price for the prediction game. \\( F\_{A0} < F\_{B0} \\)
 
 
-#### <span class="org-todo done QUESTION">QUESTION</span> If one buys \\( S\_0 \\) and sells \\( F\_B0 \\), he's better off than someone who sells \\( F\_A0 \\) {#if-one-buys-s-0-and-sells-f-b0-he-s-better-off-than-someone-who-sells-f-a0}
+#### <span class="org-todo done QUESTION">QUESTION</span> If one buys \\( S\_0 \\) and sells \\( F\_{B0} \\), he's better off than someone who sells \\( F\_{A0} \\) {#if-one-buys-s-0-and-sells-f-b0-he-s-better-off-than-someone-who-sells-f-a0}
 
 This can't happen. What do you mean can't happen?
 The interpretation is that the gain of \\( F\_0 - S\_0 \\) should be equal to the other financial activity which has no randomness such as savings account.
