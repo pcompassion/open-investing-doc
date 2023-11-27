@@ -1,8 +1,8 @@
 +++
-title = "Fourier transform"
-author = ["littlehome"]
+title = "Fourier transform (part2)"
+author = ["eugenekim"]
 date = 2023-10-18
-lastmod = 2023-10-19T16:00:51+09:00
+lastmod = 2023-11-28T01:25:48+09:00
 draft = false
 +++
 
@@ -47,34 +47,34 @@ To fully exploit the Fourier transform in this context, we'd typically proceed b
 ### Formulation {#formulation}
 
 The solution for \\( u(x, t) \\) in terms of its Fourier components is:
-\\[ u(x,t) = \sum\_k C\_k(t) e^{2 \pi i k x} \\]
+\\[ u(x,t) = \\sum_k C_k(t) e^{2 \\pi i k x} \\]
 
 The heat equation is given by:
-\\[ U\_t = \frac{1}{2} U\_{xx} \\]
+\\[ U_t = \\frac{1}{2} U_{xx} \\]
 
 
 ### Coefficient Dynamics {#coefficient-dynamics}
 
-On substituting the expression for \\( u(x, t) \\) into the heat equation and equating like terms, the time evolution of the coefficients \\( C\_k(t) \\) is given by:
-\\[ \dot{C\_k}(t) = -2 \pi^2 k^2 C\_k(t) \\]
+On substituting the expression for \\( u(x, t) \\) into the heat equation and equating like terms, the time evolution of the coefficients \\( C_k(t) \\) is given by:
+\\[ \\dot{C_k}(t) = -2 \\pi^2 k^2 C_k(t) \\]
 Which has the solution:
-\\[ C\_k(t) = C\_k(0) e^{-2 \pi^2 k^2 t} \\]
+\\[ C_k(t) = C_k(0) e^{-2 \\pi^2 k^2 t} \\]
 
 
 ### Initial Coefficients {#initial-coefficients}
 
-To obtain \\( C\_k(0) \\), one must expand the initial condition \\( f(x) \\) in its Fourier series and identify the coefficients.
+To obtain \\( C_k(0) \\), one must expand the initial condition \\( f(x) \\) in its Fourier series and identify the coefficients.
 
 
 ### Initial Condition and Fourier Coefficients {#initial-condition-and-fourier-coefficients}
 
 Given the initial temperature distribution \\( u(x, 0) \\), we can express it as:
-\\[ u(x, 0) = f(x) = \sum\_k C\_k(0) e^{2\pi i k x} \\]
+\\[ u(x, 0) = f(x) = \\sum_k C_k(0) e^{2\\pi i k x} \\]
 
 The \\( k \\)-th Fourier coefficient of \\( f(x) \\) is given by:
-\\[ C\_k(0) = \int\_0^1 f(x) e^{-2\pi i k x} \\, dx \\]
+\\[ C_k(0) = \\int_0^1 f(x) e^{-2\\pi i k x} \\, dx \\]
 
-By calculating \\( C\_k(0) \\) for all values of \\( k \\), we get a complete representation of the initial temperature distribution in terms of its Fourier components.
+By calculating \\( C_k(0) \\) for all values of \\( k \\), we get a complete representation of the initial temperature distribution in terms of its Fourier components.
 
 
 ## Understanding the Heat Equation and Its Implications {#understanding-the-heat-equation-and-its-implications}
@@ -87,7 +87,7 @@ We started with the heat equation, a partial differential equation, and then use
 
 ### Cooling Over Time {#cooling-over-time}
 
-One immediate insight from our closed form solution is that as \\( t \to \infty \\), \\( u(x,t) \to 0 \\). In plain terms? Our ring cools off over time, approaching a uniform temperature.
+One immediate insight from our closed form solution is that as \\( t \\to \\infty \\), \\( u(x,t) \\to 0 \\). In plain terms? Our ring cools off over time, approaching a uniform temperature.
 
 
 #### Conservation of Energy {#conservation-of-energy}
@@ -118,7 +118,7 @@ Suppose we have a function which looks like the following.
 
 The graph is not periodic, and we still want to express it with sum of signals.
 Suppose, the domain of the function is (a, b).
-We are going to pick a large enough T such that (\\(\frac{-1}{2} T, \frac{1}{2} T)\\) would cover the domain (a, b).
+We are going to pick a large enough T such that (\\(\\frac{-1}{2} T, \\frac{1}{2} T)\\) would cover the domain (a, b).
 And we want to make T go to infinity to cover any (non-periodic) function of any domain.
 
 
@@ -126,7 +126,7 @@ And we want to make T go to infinity to cover any (non-periodic) function of any
 
 The Fourier series provides a way to represent periodic functions as a sum of sines and cosines, which can be equivalently represented in terms of complex exponentials.
 
--   Formula: \\( f(t) = \sum\_{k} C\_k e^{\frac{2\pi i k t}{T}} \\)
+-   Formula: \\( f(t) = \\sum_{k} C_k e^{\\frac{2\\pi i k t}{T}} \\)
 -   Here, \\( f(t) \\) is periodic with period \\( T \\).
 
 
@@ -134,7 +134,7 @@ The Fourier series provides a way to represent periodic functions as a sum of si
 
 The idea is to view non-periodic functions as the limiting case of periodic functions as their period goes to infinity.
 
--   As \\( T \rightarrow \infty \\), the spacing between frequency components (given by \\( \frac{1}{T} \\)) shrinks towards zero.
+-   As \\( T \\rightarrow \\infty \\), the spacing between frequency components (given by \\( \\frac{1}{T} \\)) shrinks towards zero.
 -   This leads us from a discrete spectrum (as in Fourier series) to a continuous spectrum, reflecting the non-periodic nature of the function.
 
 
@@ -148,35 +148,35 @@ By taking this limit, we move from the discrete Fourier coefficients of the seri
 
 ### Challenge with Naive Approach {#challenge-with-naive-approach}
 
-Directly letting \\( T \rightarrow \infty \\) in the Fourier series coefficients \\( C\_k \\) causes them to diminish. Specifically:
+Directly letting \\( T \\rightarrow \\infty \\) in the Fourier series coefficients \\( C_k \\) causes them to diminish. Specifically:
 
--   \\( C\_k = \frac{1}{T} \int f(t) e^{-\frac{2\pi i k t}{T}} dt \\)
--   As \\( T \rightarrow \infty \\), \\( C\_k \\) approaches 0 when area of the function is bounded since it becomes \\( \frac{1}{T} \\) times the area (essentially an average over an increasingly large interval).
+-   \\( C_k = \\frac{1}{T} \\int f(t) e^{-\\frac{2\\pi i k t}{T}} dt \\)
+-   As \\( T \\rightarrow \\infty \\), \\( C_k \\) approaches 0 when area of the function is bounded since it becomes \\( \\frac{1}{T} \\) times the area (essentially an average over an increasingly large interval).
 
 
 ### Introducing an Intermediate Function {#introducing-an-intermediate-function}
 
 To overcome this issue, we introduce an auxiliary function:
 
-\begin{aligned}
-g\_{f}\left(\frac{k}{T}\right) = \int f(t) e^{-2\pi i \frac{k}{T} t} dt  \\\\
-\end{aligned}
+\\[ \\begin{aligned}
+g_{f}\\left(\\frac{k}{T}\\right) = \\int f(t) e^{-2\\pi i \\frac{k}{T} t} dt  \\\\
+\\end{aligned} \\]
 
 Then the series become:
 
-\\[ f(t) = \sum\_{k} g\_{f}\left(\frac{k}{T}\right) e^{2\pi i \frac{k}{T} t} \frac{1}{T} \\]
+\\[ f(t) = \\sum_{k} g_{f}\\left(\\frac{k}{T}\\right) e^{2\\pi i \\frac{k}{T} t} \\frac{1}{T} \\]
 
 
 ### Transitioning to Continuous Spectrum {#transitioning-to-continuous-spectrum}
 
-As \\( T \rightarrow \infty \\), the discrete frequency variable \\( \frac{k}{T} \\) transitions to a continuous variable \\( s \\).
-The factor \\( \frac{1}{T} \\) in the sum of the Fourier series play the role of a differential element \\( ds \\) in the integral.
+As \\( T \\rightarrow \\infty \\), the discrete frequency variable \\( \\frac{k}{T} \\) transitions to a continuous variable \\( s \\).
+The factor \\( \\frac{1}{T} \\) in the sum of the Fourier series play the role of a differential element \\( ds \\) in the integral.
 
 The coefficent becomes:
-\\[ g\_{f}(s) = \int  e^{-2\pi i s t} f(t) dt \\]
+\\[ g_{f}(s) = \\int  e^{-2\\pi i s t} f(t) dt \\]
 
 And the series become:
-\\[ f(t) = \int g\_{f}(s) e^{2\pi i s t} ds \\]
+\\[ f(t) = \\int g_{f}(s) e^{2\\pi i s t} ds \\]
 
 
 ## Example, FT of rectangle function {#example-ft-of-rectangle-function}
@@ -187,7 +187,7 @@ We look at the simplist example of Fourier transform.
 
 Given the rectangle signal, we can apply the fourier transform by applying the formula.
 
-\\[ g\_{f}(s) = \int\_{\frac{-1}{2}}^{\frac{1}{2}} e^{-2\pi i s t} dt = \frac{sin(\pi s)}{\pi s}\\]
+\\[ g_{f}(s) = \\int_{\\frac{-1}{2}}^{\\frac{1}{2}} e^{-2\\pi i s t} dt = \\frac{sin(\\pi s)}{\\pi s}\\]
 
 {{< figure src="/ox-hugo/sinc_plot_seaborn.png" >}}
 
@@ -202,9 +202,9 @@ Sinc function shows that we need many (infinitely many) sinusoidal functions at 
 
 ## Guassian's Fourier transform is itself {#guassian-s-fourier-transform-is-itself}
 
-\\[ f(t) = e^{-\pi t^{2}}\\]
+\\[ f(t) = e^{-\\pi t^{2}}\\]
 
-\\[ g\_{f}(s) = e^{-\pi s^{2}}\\]
+\\[ g_{f}(s) = e^{-\\pi s^{2}}\\]
 
 It's rather remarkable.
 
@@ -270,6 +270,6 @@ What does it mean when we have \\( e^i \\) ?
 
 ### CLT {#clt}
 
-CLT can be proved with fourier transorm
+CLT can be proved with fourier transform.
 
 <https://chat.openai.com/share/d0eb26b0-8ca9-4cb1-a5d8-a29d38380cb4>
